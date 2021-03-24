@@ -7,16 +7,16 @@ function nappula(){
   }
 
   else {
-  console.log("Hieno nimi!")
+  console.log("Nimi: OK")
 
   }
 
   if(salasana  == "") {
-  console.log("Kirjoita nimesi.");
+  console.log("Kirjoita Salasana.");
   }
 
   else {
-  console.log("Hieno nimi!")
+  console.log("Salasana: OK")
 
   }
 

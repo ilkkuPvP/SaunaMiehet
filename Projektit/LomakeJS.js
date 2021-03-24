@@ -8,7 +8,6 @@ function nappula(){
 
   else {
   console.log("Nimi: OK")
-
   }
 
   if(salasana  == "") {
@@ -17,7 +16,7 @@ function nappula(){
 
   else {
   console.log("Salasana: OK")
-
   }
+
 
 }

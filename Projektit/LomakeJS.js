@@ -3,7 +3,7 @@ function nappula(){
   var salasana = document.getElementById("Salasana").value;
 
   if(nimi == "") {
-  console.log("laita kenttään asioita saatana!");
+  console.log("Kirjoita nimesi.");
   }
 
   else {

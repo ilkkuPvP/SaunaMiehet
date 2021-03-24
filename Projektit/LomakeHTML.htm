@@ -15,6 +15,39 @@
       <input type="text" id="Nimi" value=""><br><br>
     Salasana:<br>
       <input type="password" id="Salasana" value=""><br><br>
+    Millainen koneen käyttäjä olet?<br>
+
+    <form action="/action_page.php">
+  <input type="radio" id="pelaaja" name="gender" value="male">
+  <label for="male">himopelaaja</label><br>
+  <input type="radio" id="opiskeluun" name="gender" value="female">
+  <label for="female">käytän opiskeluun</label><br>
+  <input type="radio" id="eiKonetta" name="gender" value="other">
+  <label for="other">en käytä konetta</label><br><br>
+</form><br>
+    Mitä mieltä olet sivustostani tähän asti?
+
+<form action="/action_page.php">
+  <input type="checkbox" id="tosiHieno" name="vehicle1" value="Bike">
+  <label for="vehicle1"> Todella hienot</label><br>
+  <input type="checkbox" id="ammattimainen" name="vehicle2" value="Car">
+  <label for="vehicle2"> Ammattimaisesti tehty</label><br>
+  <input type="checkbox" id="ostan" name="vehicle3" value="Boat">
+  <label for="vehicle3"> Ostan sinulta!</label><br><br>
+</form><br>
+Mikä on lempiaineesi Keudassa
+
+<form action="/action_page.php">
+  <input list="lempiAine" name="browser">
+  <datalist id="lempiAine">
+    <option value="Ammattiaineet">
+    <option value="Ruotsi">
+    <option value="Äidinkieli">
+    <option value="Matematiikka">
+    <option value="Englanti">
+  </datalist>
+</form><br>
+
     </br>
     <button onclick="Nappulannimi()" name="button">Lähetä</button>
   </body>

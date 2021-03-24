@@ -11,4 +11,13 @@ function nappula(){
 
   }
 
+  if(salasana  == "") {
+  console.log("Kirjoita nimesi.");
+  }
+
+  else {
+  console.log("Hieno nimi!")
+
+  }
+
 }

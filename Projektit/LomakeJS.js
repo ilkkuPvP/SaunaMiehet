@@ -10,7 +10,7 @@ function nappula(){
   var mielipide2 = document.getElementById("ammattimainen").checked;
   var mielipide3 = document.getElementById("ostan").checked;
   var lempiaine = document.getElementById("lempiAine").value;
-  var palaute = document.getElementById("lempiAine").value;
+  var palaute = document.getElementById("palaute").value;
 
 //1 Nimen tarkistus
 var ehdot = /^[a-zA-Z]+\s[a-zA-Z]+$/;

@@ -102,4 +102,8 @@ function nappula(){
   else {
   console.log("Lempiaine: OK");
   }
+  // ------------------------
+  //8. Palaute talletus
+var palautev2 = palaute;
+console.log(palautev2);
 }

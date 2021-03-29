@@ -102,16 +102,17 @@ function nappula(){
   else {
   console.log("Lempiaine: OK");
   }
-  // ------------------------
-  //8. Palaute talletus
-var palautev2 = palaute;
-console.log(palautev2);
-}
-/*
-if (palaute == "") {
-  alert("Kirjoita myös jotain muuta kerrottavaa")
-}
-else {
+
+// ------------------------
+//8. Palaute talletus
+  console.log(palaute);
+
+  if (palaute == "") {
+  alert("Kirjoita myös jotain muuta kerrottavaa.")
+  }
+  else {
   console.log("Tekstipalaute: OK");
+  }
+
+
 }
-*/

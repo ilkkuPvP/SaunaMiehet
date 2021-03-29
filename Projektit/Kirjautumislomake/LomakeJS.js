@@ -102,8 +102,24 @@ function nappula(){
   else {
   console.log("Lempiaine: OK");
   }
+<<<<<<< HEAD:Projektit/LomakeJS.js
   // ------------------------
   //8. Palaute talletus
 var palautev2 = palaute;
 console.log(palautev2);
+=======
+
+// ------------------------
+//8. Palaute talletus
+  console.log(palaute);
+
+  if (palaute == "") {
+  alert("Kirjoita myös jotain muuta kerrottavaa.")
+  }
+  else {
+  console.log("Tekstipalaute: OK");
+  }
+
+
+>>>>>>> 7f6b7b0dbe9c3e3724088050d543ac9d9572a7e3:Projektit/Kirjautumislomake/LomakeJS.js
 }

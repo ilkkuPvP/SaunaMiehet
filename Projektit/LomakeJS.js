@@ -103,12 +103,7 @@ function nappula(){
   console.log("Lempiaine: OK");
   }
   // ------------------------
-  //8. Palaute talletus ja tarkistus
-  if(palaute == ""){
-  alert("Täytä kohtaan palautteesi.")
-  }
-  else {
-  var palautev2 = palaute;
-  console.log(palautev2);
-}
+  //8. Palaute talletus
+var palautev2 = palaute;
+console.log(palautev2);
 }

@@ -113,6 +113,3 @@ function nappula(){
   else {
   console.log("Tekstipalaute: OK");
   }
-
-
-}

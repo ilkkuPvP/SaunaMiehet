@@ -15,12 +15,12 @@ function nappula(){
 //1 Nimen tarkistus
   var ehdot = /^[a-zA-Z]+\s[a-zA-Z]+$/;
   if(nimi == "") {
-  alert("Kirjoita nimesi.");
+  alert("Kirjoita nimesi ja älä käytä numeroita.");
   }
 
 //1 Nimen välilyönnit
   else if (!ehdot.test(nimi)) {
-  alert("Kirjoita etu- ja sukunimi, vain yksi välilyönti niiden välissä.")
+  alert("Kirjoita etu- ja sukunimi, vain yksi välilyönti niiden välissä. Äläkä käytä numeroita.")
   }
 
 //1 Nimen pituus
@@ -102,8 +102,17 @@ function nappula(){
   else {
   console.log("Lempiaine: OK");
   }
-  // ------------------------
-  //8. Palaute talletus
-var palautev2 = palaute;
-console.log(palautev2);
+
+// ------------------------
+//8. Palaute talletus
+  console.log(palaute);
+
+  if (palaute == "") {
+  alert("Kirjoita myös jotain muuta kerrottavaa.")
+  }
+  else {
+  console.log("Tekstipalaute: OK");
+  }
+
+
 }

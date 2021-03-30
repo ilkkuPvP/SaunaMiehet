@@ -82,6 +82,11 @@ function nappula(){
   if (!ehdot.test(ika)) {
   alert("Ikä pitää kirjoittaa numeroina.")
   }
+
+  else if (ika <= 0) {
+    alert("Iän täytyy olla positiivinen luku tai enemmän kuin nolla.")
+  }
+
   else {
   console.log("Ikä: OK");
   kysymys4 = true;

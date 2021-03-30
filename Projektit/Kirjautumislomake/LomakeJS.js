@@ -12,6 +12,18 @@ function nappula(){
   var lempiaine = document.getElementById("lempiAine").value;
   var palaute = document.getElementById("palaute").value;
 
+  var kysymys1 = false;
+  var kysymys2 = false;
+  var kysymys3 = false;
+  var kysymys4 = false;
+  var kysymys5 = false;
+  var kysymys6 = false;
+  var kysymys7 = false;
+  var kysymys8 = false;
+
+
+
+
 //1 Nimen tarkistus
   var ehdot = /^[a-zA-Z]+\s[a-zA-Z]+$/;
   if(nimi == "") {
@@ -29,7 +41,11 @@ function nappula(){
   }
   else {
   console.log("Nimi: OK");
+  kysymys1 = true;
   }
+
+  console.log("-------");
+
 // ---------------------------
 //2 Salasanan tarkistus
   if(salasana  == "") {
@@ -42,7 +58,10 @@ function nappula(){
 
   else {
   console.log("Salasana: OK");
+  kysymys2 = true;
   }
+
+  console.log("-------");
 
 // ---------------------------
 //3 Sähköpostin tarkistus
@@ -52,7 +71,10 @@ function nappula(){
   }
   else {
   console.log("Email: OK");
+  kysymys3 = true;
   }
+
+  console.log("-------");
 
 // ---------------------------
 //4 Iän numeron tarkistus
@@ -62,37 +84,50 @@ function nappula(){
   }
   else {
   console.log("Ikä: OK");
+  kysymys4 = true;
   }
+
+  console.log("-------");
 
 // -----------------------------------------------------
 //5. minkälainen koneen käyttäjä olet olet tarkistus
   if(pelaaja1 === true) {
-  console.log("koneen käyttäjä on ok")
+  console.log("Koneen käyttötapa: OK")
+  kysymys5 = true;
   }
   else if (pelaaja2 === true) {
-  console.log("koneen käyttäjä on ok")
+  console.log("Koneen käyttötapa: OK")
+  kysymys5 = true;
   }
   else if (pelaaja3 === true) {
-  console.log("Koneen käyttäjä on ok")
+  console.log("Koneen käyttötapa: OK")
+  kysymys5 = true;
   }
   else {
   alert("Valitse minkälainen koneen käyttäjä olet.")
   }
 
+  console.log("-------");
+
 // -----------------------------------
 //6. mitä mieltä olet sivustamme
   if(mielipide1 === true){
-  console.log("Mielipide1: OK")
+  console.log("Mielipide: OK")
+  kysymys6 = true;
   }
   if(mielipide2 === true){
-  console.log("Mielipide2: OK")
+  console.log("Mielipide: OK")
+  kysymys6 = true;
   }
   if(mielipide3 === true){
-  console.log("Mielipide3: OK")
+  console.log("Mielipide: OK")
+  kysymys6 = true;
   }
   else if ((mielipide1 === false) && (mielipide2 === false) && (mielipide3 === false)) {
   alert("Valitse mielipiteesi sivustamme.")
   }
+
+  console.log("-------");
 
 // -------------------------
 //7. Lempiaine tarkistus
@@ -101,15 +136,31 @@ function nappula(){
   }
   else {
   console.log("Lempiaine: OK");
+  kysymys7 = true;
   }
+
+  console.log("-------");
 
 // ------------------------
 //8. Palaute talletus
-  console.log(palaute);
-
   if (palaute == "") {
   alert("Kirjoita myös jotain muuta kerrottavaa.")
   }
   else {
   console.log("Tekstipalaute: OK");
+  kysymys8 = true;
   }
+  console.log("Asiakkaan palaute: " + palaute);
+
+  console.log("-------");
+
+// ------------------------
+//Lopullinen tarkistus ja kiitoskset
+  if (kysymys1 === true && kysymys2 === true && kysymys3 === true && kysymys4 === true && kysymys5 === true && kysymys6 === true && kysymys7 === true && kysymys8 === true) {
+  console.log("Kaikki tiedot syötetty onnistuneesti.");
+  console.log("-------");
+
+  alert("Kiitos lomakkeen täytöstä!")
+  window.location.href = "LomakeKiitos.htm";
+  }
+}

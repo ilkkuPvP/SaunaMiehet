@@ -1,17 +1,56 @@
-h1 {
+
+/*Lomake sivun otsikon fontti ja koko*/
+.otsikkoLomake {
   font-family: 'Indie Flower', cursive;
   font-size: 60px;
   margin-bottom: 0;
   margin-top: 0;
 }
 
-body {
+/*Kiitos sivun otsikko ja teksti kehys*/
+.divKiitos {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  border: solid 4px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+/*Kiitos sivun otsikon fontti*/
+.otsikkoKiitos {
+  font-family: 'Indie Flower', cursive;
+  font-size: 60px;
+}
+
+/*Kiitos sivun tekstin koko*/
+.tekstiKiitos {
+  font-size: 30px;
+}
+
+
+/* BODY (ALKU) */
+
+/*Kiitos sivun taustaväri*/
+.bodyKiitos {
+  background-color: #ffe99c;
+}
+
+/*Lomake sivun taustaväri ja kehys*/
+.bodyLomake {
+  display: inline-block;
   background-color: #ffe99c;
   border: solid 4px;
   border-radius: 20px;
   padding: 10px;
 }
 
+/* BODY (LOPPU) */
+
+/* BUTTON */
+
+/*Napin ulkonäkö*/
 button {
   display: block;
   background-color: white;
@@ -20,6 +59,7 @@ button {
   padding: 14px 16px;
 }
 
+/*Nappi vaihtaa väriä, hiiren ollessa sen päällä*/
 button:hover {
   background-color: lightgray;
 }

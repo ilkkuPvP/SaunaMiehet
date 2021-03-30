@@ -1,53 +1,25 @@
-window.addEventListener("keydown", function (event) {
-  if (event.defaultPrevented) {
-    return;
-  }
+function arvonta() {
+  var numerot = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  var arvottu = Math.floor(Math.random() * numerot.length) + 1;
+  console.log(arvottu);
+}
+arvonta();
 
-  switch (event.key) {
 
-    case "0":
-      console.log("0");
-      break;
+function Nappula() {
 
-    case "1":
-      console.log("1");
-      break;
+}
 
-    case "2":
-      console.log("2");
-      break;
 
-    case "3":
-      console.log("3");
-      break;
 
-    case "4":
-      console.log("4");
-      break;
 
-    case "5":
-      console.log("5");
-      break;
 
-    case "6":
-      console.log("6");
-      break;
 
-    case "7":
-      console.log("7");
-      break;
 
-    case "8":
-      console.log("8");
-      break;
 
-    case "9":
-      console.log("9");
-      break;
 
-    default:
-      return;
-  }
 
-  event.preventDefault();
-}, true);
+
+
+
+//

@@ -16,6 +16,10 @@
   border: solid 4px;
   border-radius: 20px;
   padding: 10px;
+
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*Kiitos sivun otsikon fontti*/
@@ -44,6 +48,10 @@
   border: solid 4px;
   border-radius: 20px;
   padding: 10px;
+
+  /*position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);*/
 }
 
 /* BODY (LOPPU) */

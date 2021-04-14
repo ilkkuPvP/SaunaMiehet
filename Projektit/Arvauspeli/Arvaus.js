@@ -2,6 +2,8 @@
 
 
 // arvonta kone
+var vHistoria = 0, vHistoriaText = "Voitot: ";
+
 var numerot = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 var arvonta = Math.floor(Math.random() * numerot.length + 1);
   var h = 0;
@@ -20,6 +22,7 @@ function Nappula(){
 h += 1;
 } else if (arvov1 == arvonta){
     alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    vHistoria += 1;
 
 }
 if(h == 3){
@@ -42,10 +45,11 @@ function Nappula2(){
   alert("Luku on pienempi.");
 } else if (arvov2 == arvonta && (h < 3)){
     alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    vHistoria += 1;
+    document.getElementById("textVHistoria").innerHTML = "Voitot: " + vHistoria;
   }
   if(h == 3){
 alert("Hävisit pelin saatanan runkkari");
-
   }
 }
 function Nappula3(){
@@ -58,6 +62,8 @@ function Nappula3(){
   alert("Luku on pienempi.");
 } else if (arvov3 == arvonta && (h < 3)){
     alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    vHistoria += 1;
+    document.getElementById("textVHistoria").innerHTML = "Voitot: " + vHistoria;
   }
   if(h == 3){
 alert("Hävisit pelin saatanan runkkari");
@@ -74,6 +80,8 @@ function Nappula4(){
   alert("Luku on pienempi.");
 } else if (arvov4 == arvonta && (h < 3)){
     alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    vHistoria += 1;
+    document.getElementById("textVHistoria").innerHTML = "Voitot: " + vHistoria;
   }
   if(h == 3){
 alert("Hävisit pelin saatanan runkkari");
@@ -91,6 +99,8 @@ function Nappula5(){
   alert("Luku on pienempi.");
 } else if (arvov5 == arvonta && (h < 3)){
     alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    vHistoria += 1;
+    document.getElementById("textVHistoria").innerHTML = "Voitot: " + vHistoria;
   }
   if(h == 3){
 alert("Hävisit pelin saatanan runkkari");
@@ -107,6 +117,8 @@ function Nappula6(){
   alert("Luku on pienempi.");
 } else if (arvov6 == arvonta && (h < 3)){
     alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    vHistoria += 1;
+    document.getElementById("textVHistoria").innerHTML = "Voitot: " + vHistoria;
   }
   if(h == 3){
 alert("Hävisit pelin saatanan runkkari");
@@ -123,6 +135,8 @@ function Nappula7(){
   alert("Luku on pienempi.");
 } else if (arvov7 == arvonta && (h < 3)){
     alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    vHistoria += 1;
+    document.getElementById("textVHistoria").innerHTML = "Voitot: " + vHistoria;
   }
   if(h == 3){
 alert("Hävisit pelin saatanan runkkari");
@@ -139,6 +153,8 @@ function Nappula8(){
   alert("Luku on pienempi.");
 } else if (arvov8 == arvonta && (h < 3)){
     alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    vHistoria += 1;
+    document.getElementById("textVHistoria").innerHTML = "Voitot: " + vHistoria;
   }
   if(h == 3){
 alert("Hävisit pelin saatanan runkkari");
@@ -155,6 +171,8 @@ function Nappula9(){
   alert("Luku on pienempi.");
 } else if (arvov9 == arvonta && (h < 3)){
     alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    vHistoria += 1;
+    document.getElementById("textVHistoria").innerHTML = "Voitot: " + vHistoria;
   }
   if(h == 3){
 alert("Hävisit pelin saatanan runkkari");
@@ -172,6 +190,8 @@ function Nappula10(){
 
   } else if (arvov10 == arvonta && (h < 3)){
     alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    vHistoria += 1;
+    document.getElementById("textVHistoria").innerHTML = "Voitot: " + vHistoria;
   }
     if(h == 3){
   alert("Hävisit pelin saatanan runkkari");

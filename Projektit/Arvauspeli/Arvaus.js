@@ -4,13 +4,16 @@
 // arvonta kone
 var vHistoria = 0;
 
+var arvonta;
 var numerot = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+
 var arvonta = Math.floor(Math.random() * numerot.length + 1);
-  var yritykset = 0;
 console.log(arvonta);
 
+var yritykset = 0;
+
 function Nappula(){
-document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1) + "/3";
+document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   arvov1 = document.getElementById("nappiv1").value;
   if(arvov1 < arvonta && (yritykset < 3)){
     yritykset += 1;
@@ -28,7 +31,7 @@ yritykset += 1;
 }
 
 function Nappula2(){
-document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1) + "/3";
+document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
 
   arvov2 = document.getElementById("nappiv2").value;
 
@@ -50,7 +53,7 @@ alert("Hävisit pelin saatanan runkkari");
 }
 
 function Nappula3(){
-document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1) + "/3";
+document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   arvov3 = document.getElementById("nappiv3").value;
   if(arvov3 < arvonta && (yritykset < 3)){
         yritykset += 1;
@@ -70,7 +73,7 @@ alert("Hävisit pelin saatanan runkkari");
 }
 
 function Nappula4(){
-document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1) + "/3";
+document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   arvov4 = document.getElementById("nappiv4").value;
   if(arvov4 < arvonta && (yritykset < 3)){
         yritykset += 1;
@@ -90,7 +93,7 @@ alert("Hävisit pelin saatanan runkkari");
 }
 
 function Nappula5(){
-document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1) + "/3";
+document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   arvov5 = document.getElementById("nappiv5").value;
   if(arvov5 < arvonta && (yritykset < 3)){
         yritykset += 1;
@@ -110,7 +113,7 @@ alert("Hävisit pelin saatanan runkkari");
 }
 
 function Nappula6(){
-document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1) + "/3";
+document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   arvov6 = document.getElementById("nappiv6").value;
   if(arvov6 < arvonta && (yritykset < 3)){
         yritykset += 1;
@@ -130,7 +133,7 @@ alert("Hävisit pelin saatanan runkkari");
 }
 
 function Nappula7(){
-document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1) + "/3";
+document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   arvov7 = document.getElementById("nappiv7").value;
   if(arvov7 < arvonta && (yritykset < 3)){
         yritykset += 1;
@@ -150,7 +153,7 @@ alert("Hävisit pelin saatanan runkkari");
 }
 
 function Nappula8(){
-document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1) + "/3";
+document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   arvov8 = document.getElementById("nappiv8").value;
   if(arvov8 < arvonta && (yritykset < 3)){
         yritykset += 1;
@@ -170,7 +173,7 @@ alert("Hävisit pelin saatanan runkkari");
 }
 
 function Nappula9(){
-document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1) + "/3";
+document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   arvov9 = document.getElementById("nappiv9").value;
   if(arvov9 < arvonta && (yritykset < 3)){
         yritykset += 1;
@@ -190,7 +193,7 @@ alert("Hävisit pelin saatanan runkkari");
 }
 
 function Nappula10(){
-document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1) + "/3";
+document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   arvov10 = document.getElementById("nappiv10").value;
   if(arvov10 < arvonta && (yritykset < 3)){
         yritykset += 1;
@@ -207,5 +210,12 @@ document.getElementById("textYritysNro").innerHTML = "Yritys: " + (yritykset + 1
     if(yritykset == 3){
   alert("Hävisit pelin saatanan runkkari");
     }
+}
 
+function uusiPeliNappula() {
+  yritykset = 0;
+  document.getElementById("textYritysNro").innerHTML = yritykset;
+  arvonta = Math.floor(Math.random() * numerot.length + 1);
+  console.log(arvonta);
+  //window.location.reload(false);
 }

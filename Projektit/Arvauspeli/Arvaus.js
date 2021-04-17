@@ -217,5 +217,4 @@ function uusiPeliNappula() {
   document.getElementById("textYritysNro").innerHTML = yritykset;
   arvonta = Math.floor(Math.random() * numerot.length + 1);
   console.log(arvonta);
-  //window.location.reload(false);
 }

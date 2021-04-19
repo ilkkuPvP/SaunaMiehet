@@ -8,41 +8,44 @@
   </head>
   <body>
 
-    <div class="calculator">
-      <div class="ruutu">0</div>
-      <div class="laskNap"> … </div>
+    <div class="laskin">
+      <div class="naytto">0</div>
+      <div class="laskinNapit"> … </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
 <p id="lvastaus"></p>
-<div class="laskNap">
-  <button class="merkki" data-action="plus">+</button>
-  <button class="merkki" data-action="miinus">-</button>
-  <button class="merkki" data-action="kerto">*</button>
-  <button class="merkki" data-action="jako">÷</button>
-  <button>7</button>
-  <button>8</button>
-  <button>9</button>
-  <button>4</button>
-  <button>5</button>
-  <button>6</button>
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-  <button>0</button>
-  <button data-action="desimaali">.</button>
-  <button data-action="clear">AC</button>
-  <button class="yhtakuin" data-action="laske">=</button>
+<div class="laskinNapit">
+
+  <table>
+    <tr>
+      <td><button class="merkki" data-action="kerto" id="nappiKerto">*</button></td>
+      <td><button class="merkki" data-action="jako" id="nappiKerto">÷</button></td>
+      <td><button class="merkki" data-action="plus" id="nappiKerto">+</button></td>
+      <td><button class="merkki" data-action="miinus" id="nappiKerto">-</button></td>
+    </tr>
+    <tr>
+      <td><button id="nappi7">7</button></td>
+      <td><button id="nappi8">8</button></td>
+      <td><button id="nappi9">9</button></td>
+      <td><button data-action="clear" id="nappiClear">AC</button></td>
+    </tr>
+    <tr>
+      <td><button id="nappi4">4</button></td>
+      <td><button id="nappi5">5</button></td>
+      <td><button id="nappi6">6</button></td>
+    </tr>
+    <tr>
+      <td><button id="nappi1">1</button></td>
+      <td><button id="nappi2">2</button></td>
+      <td><button id="nappi3">3</button></td>
+    </tr>
+    <tr>
+      <td><button id="nappi0">0</button></td>
+      <td><button data-action="desimaali" id="nappiDesi">.</button></td>
+      <td><button class="yhtakuin" data-action="yhtakuin" id="nappiYhta">=</button></td>
+    </tr>
+  </table>
+
 </div>
 
 

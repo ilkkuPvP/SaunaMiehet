@@ -113,3 +113,8 @@ console.log("nyt");
 
 }
 }
+
+function clearButton() {
+  var clear = document.getElementById("lvastaus").innerHTML = 0;
+  luku = 0;
+}

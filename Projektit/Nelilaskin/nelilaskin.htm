@@ -18,8 +18,8 @@
 
   <table>
     <tr>
-      <td><button class="merkki" data-action="kerto" id="nappiKerto">*</button></td>
-      <td><button class="merkki" data-action="jako" id="nappiKerto">÷</button></td>
+      <td><button class="merkki" data-action="kerto" id="nappiKerto" onclick="kerto()">*</button></td>
+      <td><button class="merkki" data-action="jako" id="nappiKerto" onclick="jako()">÷</button></td>
       <td><button class="merkki" data-action="plus" id="nappiKerto" onclick="plussaus()">+</button></td>
       <td><button class="merkki" data-action="miinus" id="nappiKerto" onclick="miinus()">-</button></td>
     </tr>
@@ -40,8 +40,8 @@
       <td><button id="nappi3" value="3" onclick="button3()">3</button></td>
     </tr>
     <tr>
-      <td><button id="nappi0" value="0">0</button></td>
-      <td><button data-action="desimaali" id="nappiDesi">.</button></td>
+      <td><button id="nappi0" value="0" onclick="button0()">0</button></td>
+      <td><button data-action="desimaali" id="nappiDesi" onclick="desi()">.</button></td>
       <td><button class="yhtakuin" data-action="yhtakuin" id="nappiYhta" onclick="yhtäsuuri()">=</button></td>
     </tr>
   </table>

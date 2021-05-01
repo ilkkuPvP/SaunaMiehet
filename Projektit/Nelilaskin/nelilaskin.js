@@ -17,8 +17,36 @@ luku += 2;
 }
 vastaus = +teksti - +miinus;
 }
-function yhtäsuuri(){
 
+
+function jako(jako){
+if(luku == 0){
+var lisäysv3 = document.getElementById("lvastaus").innerHTML += "/";
+luku += 3;
+}
+vastaus = +teksti / +jako;
+}
+function kerto(kerto){
+if(luku == 0){
+var lisäys = document.getElementById("lvastaus").innerHTML += "*";
+luku += 4;
+
+}
+vastaus = +teksti * +kerto;
+}
+function desi(){
+if(luku == 0){
+var lisäys = document.getElementById("lvastaus").innerHTML += ".";
+teksti += ".";
+}
+if(luku > 0){
+  var lisäys = document.getElementById("lvastaus").innerHTML += ".";
+lasku += ".";
+
+
+}
+}
+function yhtäsuuri(){
 var lopputulos = vastaus;
 console.log(lopputulos);
 document.getElementById("lvastaus").innerHTML = lopputulos;
@@ -26,24 +54,61 @@ luku = 0;
 teksti = lopputulos;
 lasku = 0;
 
+if(lopputulos == 0){
+document.getElementById("lvastaus").innerHTML = "";
 
 }
+}
+
+function button0(){
+  if(luku == 0){
+alert("älä pistä nollaa ekaks luvuks");
+  }
+
+  if(luku == 1){
+  lasku += "0";
+  plussaus(lasku);
+  }
+  if(luku == 2){
+  lasku += "0";
+  miinus(lasku);
+  }
+  if(luku == 3){
+  lasku += "0";
+  jako(lasku);
+  }
+  if(luku == 4){
+  lasku += "0";
+  kerto(lasku);
+
+  }
+  }
+
+
+
 
 function button1(){
-
 var eka = document.getElementById("lvastaus").innerHTML += document.getElementById("nappi1").value;
 if(luku == 0){
  teksti += "1";
+ luku = 0;
 }
 
 if(luku == 1){
 lasku += "1";
 plussaus(lasku);
-console.log("nyt");
 }
 if(luku == 2){
 lasku += "1";
 miinus(lasku);
+}
+if(luku == 3){
+lasku += "1";
+jako(lasku);
+}
+if(luku == 4){
+lasku += "1";
+kerto(lasku);
 
 }
 }
@@ -55,11 +120,19 @@ if(luku == 0){
 if(luku == 1){
  lasku += "2";
  plussaus(lasku);
-console.log("nyt");
 }
 if(luku == 2){
 lasku += "2";
 miinus(2);
+}
+if(luku == 3){
+lasku += "2";
+jako(lasku);
+}
+if(luku == 4){
+lasku += "2";
+kerto(lasku);
+
 }
 }
 function button3(){
@@ -70,11 +143,19 @@ if(luku == 0){
 if(luku == 1){
 lasku += "3";
 plussaus(lasku);
-console.log("nyt");
 }
 if(luku == 2){
 lasku += "3";
 miinus(lasku);
+}
+if(luku == 3){
+lasku += "3";
+jako(lasku);
+}
+if(luku == 4){
+lasku += "3";
+kerto(lasku);
+
 }
 }
 function button4(){
@@ -86,12 +167,21 @@ if(luku == 0){
 if(luku == 1){
 lasku += "4";
 plussaus(lasku);
-console.log("nyt");
 
 }
 if(luku == 2){
 lasku += "4";
 miinus(lasku);
+}
+if(luku == 3){
+lasku += "4";
+jako(lasku);
+
+}
+if(luku == 4){
+lasku += "4";
+kerto(lasku);
+
 }
 }
 function button5(){
@@ -102,11 +192,20 @@ if(luku == 0){
 if(luku == 1){
 lasku += "5";
 plussaus(lasku);
-console.log("nyt");
 }
 if(luku == 2){
 lasku += "5";
 miinus(lasku);
+}
+if(luku == 3){
+lasku += "5";
+jako(lasku);
+
+}
+if(luku == 4){
+lasku += "5";
+kerto(lasku);
+
 }
 }
 function button6(){
@@ -117,11 +216,20 @@ if(luku == 0){
 if(luku == 1){
 lasku += "6";
 plussaus(lasku);
-console.log("nyt");
 }
 if(luku == 2){
 lasku += "6";
 miinus(lasku);
+}
+if(luku == 3){
+lasku += "6";
+jako(lasku);
+
+}
+if(luku == 4){
+lasku += "6";
+kerto(lasku);
+
 }
 }
 function button7(){
@@ -133,12 +241,21 @@ if(luku == 0){
 if(luku == 1){
 lasku += "7";
 plussaus(lasku);
-console.log("nyt");
 
 }
 if(luku == 2){
 lasku += "7";
 miinus(lasku);
+}
+if(luku == 3){
+lasku += "7";
+jako(lasku);
+
+}
+if(luku == 4){
+lasku += "7";
+kerto(lasku);
+
 }
 }
 function button8(){
@@ -149,11 +266,20 @@ if(luku == 0){
 if(luku == 1){
 lasku += "8";
 plussaus(lasku);
-console.log("nyt");
 }
 if(luku == 2){
 lasku += "8";
 miinus(lasku);
+}
+if(luku == 3){
+lasku += "8";
+jako(lasku);
+
+}
+if(luku == 4){
+lasku += "8";
+kerto(lasku);
+
 }
 }
 function button9(){
@@ -164,12 +290,21 @@ if(luku == 0){
 if(luku == 1){
 lasku += "9";
 plussaus(lasku);
-console.log("nyt");
 
 }
 if(luku == 2){
 lasku += "9";
 miinus(lasku);
+}
+if(luku == 3){
+lasku += "9";
+jako(lasku);
+
+}
+if(luku == 4){
+lasku += "9";
+kerto(lasku);
+
 }
 }
 

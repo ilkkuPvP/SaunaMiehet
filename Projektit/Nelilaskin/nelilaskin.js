@@ -1,3 +1,4 @@
+
 var teksti = 0;
 var lasku = 0;
 var luku = 0;
@@ -120,6 +121,9 @@ console.log("nyt");
 }
 
 function clearButton() {
-  var clear = document.getElementById("lvastaus").innerHTML = 0;
+  var clear = document.getElementById("lvastaus").innerHTML = "";
+  lasku = 0;
+  teksti = 0;
+  lopputulos = 0;
   luku = 0;
 }

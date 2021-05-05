@@ -22,11 +22,11 @@ document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   alert("Luku on pienempi.");
 yritykset += 1;
   } else if (arvov1 == arvonta){
-    alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    alert("Hienoa! Arvasit oikein! Vai huijasitko? Paina \"Uusi Peli\" -pelataksesi lisää.");
     vHistoria += 1;
   }
   if(yritykset == 3){
-  alert("Hävisit pelin saatanan runkkari");
+  alert("Hävisit pelin. Paina \"Uusi Peli\" pelataksesi lisää.");
   }
 }
 
@@ -42,12 +42,12 @@ document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
       yritykset += 1;
   alert("Luku on pienempi.");
 } else if (arvov2 == arvonta && (yritykset < 3)){
-    alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    alert("Hienoa! Arvasit oikein! Vai huijasitko? Paina \"Uusi Peli\" -pelataksesi lisää.");
     vHistoria += 1;
     document.getElementById("textVHistoria").innerHTML = vHistoria; "Voitot: " + vHistoria;
   }
   if(yritykset == 3){
-alert("Hävisit pelin saatanan runkkari");
+alert("Hävisit pelin. Paina \"Uusi Peli\" pelataksesi lisää.");
   }
 
 }
@@ -62,12 +62,12 @@ document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
       yritykset += 1;
   alert("Luku on pienempi.");
 } else if (arvov3 == arvonta && (yritykset < 3)){
-    alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    alert("Hienoa! Arvasit oikein! Vai huijasitko? Paina \"Uusi Peli\" -pelataksesi lisää.");
     vHistoria += 1;
     document.getElementById("textVHistoria").innerHTML = vHistoria; "Voitot: " + vHistoria;
   }
   if(yritykset == 3){
-alert("Hävisit pelin saatanan runkkari");
+alert("Hävisit pelin. Paina \"Uusi Peli\" pelataksesi lisää.");
   }
 
 }
@@ -82,12 +82,12 @@ document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
       yritykset += 1;
   alert("Luku on pienempi.");
 } else if (arvov4 == arvonta && (yritykset < 3)){
-    alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    alert("Hienoa! Arvasit oikein! Vai huijasitko? Paina \"Uusi Peli\" -pelataksesi lisää.");
     vHistoria += 1;
     document.getElementById("textVHistoria").innerHTML = vHistoria; "Voitot: " + vHistoria;
   }
   if(yritykset == 3){
-alert("Hävisit pelin saatanan runkkari");
+alert("Hävisit pelin. Paina \"Uusi Peli\" pelataksesi lisää.");
   }
 
 }
@@ -102,12 +102,12 @@ document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
       yritykset += 1;
   alert("Luku on pienempi.");
 } else if (arvov5 == arvonta && (yritykset < 3)){
-    alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    alert("Hienoa! Arvasit oikein! Vai huijasitko? Paina \"Uusi Peli\" -pelataksesi lisää.");
     vHistoria += 1;
     document.getElementById("textVHistoria").innerHTML = vHistoria; "Voitot: " + vHistoria;
   }
   if(yritykset == 3){
-alert("Hävisit pelin saatanan runkkari");
+alert("Hävisit pelin. Paina \"Uusi Peli\" pelataksesi lisää.");
   }
 
 }
@@ -122,12 +122,12 @@ document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
       yritykset += 1;
   alert("Luku on pienempi.");
 } else if (arvov6 == arvonta && (yritykset < 3)){
-    alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    alert("Hienoa! Arvasit oikein! Vai huijasitko? Paina \"Uusi Peli\" -pelataksesi lisää.");
     vHistoria += 1;
     document.getElementById("textVHistoria").innerHTML = vHistoria; "Voitot: " + vHistoria;
   }
   if(yritykset == 3){
-alert("Hävisit pelin saatanan runkkari");
+alert("Hävisit pelin. Paina \"Uusi Peli\" pelataksesi lisää.");
   }
 
 }
@@ -142,12 +142,12 @@ document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
       yritykset += 1;
   alert("Luku on pienempi.");
 } else if (arvov7 == arvonta && (yritykset < 3)){
-    alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    alert("Hienoa! Arvasit oikein! Vai huijasitko? Paina \"Uusi Peli\" -pelataksesi lisää.");
     vHistoria += 1;
     document.getElementById("textVHistoria").innerHTML = vHistoria; "Voitot: " + vHistoria;
   }
   if(yritykset == 3){
-alert("Hävisit pelin saatanan runkkari");
+alert("Hävisit pelin. Paina \"Uusi Peli\" pelataksesi lisää.");
   }
 
 }
@@ -162,12 +162,12 @@ document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
       yritykset += 1;
   alert("Luku on pienempi.");
 } else if (arvov8 == arvonta && (yritykset < 3)){
-    alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    alert("Hienoa! Arvasit oikein! Vai huijasitko? Paina \"Uusi Peli\" -pelataksesi lisää.");
     vHistoria += 1;
     document.getElementById("textVHistoria").innerHTML = vHistoria; "Voitot: " + vHistoria;
   }
   if(yritykset == 3){
-alert("Hävisit pelin saatanan runkkari");
+alert("Hävisit pelin. Paina \"Uusi Peli\" pelataksesi lisää.");
   }
 
 }
@@ -182,12 +182,12 @@ document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
       yritykset += 1;
   alert("Luku on pienempi.");
 } else if (arvov9 == arvonta && (yritykset < 3)){
-    alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    alert("Hienoa! Arvasit oikein! Vai huijasitko? Paina \"Uusi Peli\" -pelataksesi lisää.");
     vHistoria += 1;
     document.getElementById("textVHistoria").innerHTML = vHistoria; "Voitot: " + vHistoria;
   }
   if(yritykset == 3){
-alert("Hävisit pelin saatanan runkkari");
+alert("Hävisit pelin. Paina \"Uusi Peli\" pelataksesi lisää.");
   }
 
 }
@@ -203,12 +203,12 @@ document.getElementById("textYritysNro").innerHTML = (yritykset + 1);
   alert("Luku on pienempi.");
 
   } else if (arvov10 == arvonta && (yritykset < 3)){
-    alert("Hienoa! Arvasit oikein! Vai huijasitko?");
+    alert("Hienoa! Arvasit oikein! Vai huijasitko? Paina \"Uusi Peli\" -pelataksesi lisää.");
     vHistoria += 1;
     document.getElementById("textVHistoria").innerHTML = vHistoria; "Voitot: " + vHistoria;
   }
     if(yritykset == 3){
-  alert("Hävisit pelin saatanan runkkari");
+  alert("Hävisit pelin. Paina \"Uusi Peli\" pelataksesi lisää.");
     }
 }
 

@@ -17,6 +17,11 @@ button {
   font-size: 32px;
 }
 
+.lvastaus {
+  font-family: 'Indie Flower', cursive;
+  font-size: 26px;
+}
+
 .laskinNapit {
   display: inline-block;
   border: solid 4px;

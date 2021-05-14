@@ -2,19 +2,39 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device.width, intial-scale=1.0">
+    <link rel="stylesheet" href="lista.css"></link>
+
     <title>Tehtävä lista</title>
   </head>
   <body>
+       <div class="container">
+<div id="listbox" class="header">
+
+
+
 
     <h1>Tehtäviä</h1>
     <h2>Lisätäksesi uuden tehtävän, syötä se alla olevaan kenttään</h2>
     <h2>Napauta tehtävää, kun olet tehnyt sen</h2>
     <h2>Napauta tehtävän perässä X-kirjainta poistaaksesi tehtävän</h2>
 
-<form>
-  <input type="text" id="teht" value="">
-  <button type="button" id="listaus()" name="button">Lisää tehtävä</button>
-</form>
 
+  <input type="text" id="item" placeholder="Title ..."/>
+  <span id="newElement()" class="button">Lisää tehtävä</span>
+</div>
+<ul id="list">
+<li>Opi</li>
+<li>Pelaa</li>
+<li>Koira</li>
+</ul>
+
+
+
+
+
+
+</div>
+<script src="lista.js"></script>
   </body>
 </html>

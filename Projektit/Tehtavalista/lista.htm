@@ -2,27 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device.width, intial-scale=1.0">
-    <link rel="stylesheet" href="lista.css"></link>
-
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <title>Tehtävä lista</title>
+    <link rel="stylesheet" href="lista.css"></link>
   </head>
   <body>
        <div class="container">
 <div id="listbox" class="header">
-
-
-
 
     <h1>Tehtäviä</h1>
     <h2>Lisätäksesi uuden tehtävän, syötä se alla olevaan kenttään</h2>
     <h2>Napauta tehtävää, kun olet tehnyt sen</h2>
     <h2>Napauta tehtävän perässä X-kirjainta poistaaksesi tehtävän</h2>
 
-
-  <input type="text" id="item" placeholder="Title ..."/>
-  <span id="newElement()" class="button">Lisää tehtävä</span>
+    <input type="text" id="item" placeholder="Syötä uusi tehtävä..."/>
+    <span onclick="newElement()" class="addButton">Lisää tehtävä</span>
 </div>
+
 <ul id="list">
 <li>Opi</li>
 <li>Pelaa</li>

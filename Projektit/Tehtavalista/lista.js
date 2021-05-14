@@ -2,19 +2,20 @@ var myNodeList = document.getElementsByTagName('LI')
 
 var i;
 
-for (i=0; i<myNodeList.lenght; i++) {
+for (i=0; i<myNodeList.length; i++) {
 
-var span =document.createElement('SPAN')
+var span = document.createElement('SPAN')
 var txt = document.createTextNode('\u00D7');
 span.className='close'
 span.appendChild(txt);
 myNodeList[i].appendChild(span)
 }
 
+//Tällä poistetaan joku tehtävä
 var close = document.getElementsByClassName('close')
 var i;
 
-for(i=0; i<close.lenght; i++){
+for(i=0; i<close.length; i++){
   close[i].onclick=function(){
     var div = this.parentElement;
     div.style.display="none"
@@ -28,11 +29,11 @@ list.addEventListener('click' ,function(ev){
 },false)
 
 function newElement() {
-var li= document.createElement('li')
-var inputValue =document.getElementById('item').value
-var t =document.createTextNode(inputValue)
+var li = document.createElement('li')
+var inputValue = document.getElementById('item').value
+var t = document.createTextNode(inputValue)
 li.appendChild(t)
-if(inputvalue === "") {
+if(inputValue === "") {
   alert('Tämä kenttä ei saa olla tyhjä')
 }else {
   document.getElementById('list').appendChild(li)
@@ -42,11 +43,11 @@ if(inputvalue === "") {
 document.getElementById('item').value=''
 
 var span= document.createElement('SPAN');
-var txt= document.createTextNode('/u00D7')
+var txt= document.createTextNode('\u00D7')
 span.appendChild(txt)
 li.appendChild(span)
 
-for (i=0;i<close.lenght;i++){
+for (i=0;i<close.length;i++){
   close[i].onclick=function(){
     var div= this.parentElement;
     div.style.display="none"

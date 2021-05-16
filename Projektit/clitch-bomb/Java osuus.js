@@ -148,14 +148,14 @@ vx *= 1;
 }
 
 // lattia
-if (ball.y + ball.r > canvas.height){
+if (ball.y  > canvas.height){
 
 vy *= -1;
 }
 
 // katto
 
-if (ball.y + ball.r < canvas.height - canvas.height){
+if (ball.y < canvas.height - canvas.height){
 
 vy *= -1;
 }

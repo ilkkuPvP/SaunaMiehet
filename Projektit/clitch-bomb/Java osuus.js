@@ -196,6 +196,12 @@ vx *= 1
 
  }
 }
+// bugikorjauksia
+if(ball.x > käyttäjä.x && ball.x < käyttäjä.x + käyttäjä.width && ball.y > käyttäjä.y - käyttäjä.width && ball.y < käyttäjä.y + käyttäjä.height ){
+console.log("huora");
+vy *= -1;
+vx *= -1;
+}
 }
 function käyttäjäliike(){
 

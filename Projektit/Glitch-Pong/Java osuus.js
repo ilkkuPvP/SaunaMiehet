@@ -1,3 +1,4 @@
+
 /* tehtävää; kulmna säätö, parempi ohjaus ja parempi ai
 */
 
@@ -66,11 +67,11 @@ käyttäjä.y += 100;
 
   document.addEventListener('keydown', function(event) {
       if(event.keyCode == 	38) {
-  käyttäjä.y += -100;
+  käyttäjä.y += -100
 
       }
       else if(event.keyCode == 	40) {
-  käyttäjä.y += 100;
+  käyttäjä.y += 100
 
       }
   });
@@ -169,17 +170,19 @@ https://www.youtube.com/watch?v=GpM8yvDP21o mite collision detection tehää
 ja pystyin helposti poimimaan pää asiat javascriptiin).*/
 
 
-if(ball.x > käyttäjä.x && ball.x < käyttäjä.x + käyttäjä.width && ball.y > käyttäjä.y - käyttäjä.width && ball.y < käyttäjä.y + käyttäjä.height)
+if(ball.x > käyttäjä.x && ball.x < käyttäjä.x + käyttäjä.width)
 {
   lukujav2 = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "110", "120", "130", "150", "160", "170", "180"];
   arvontav3 = Math.floor(Math.random(lukujav2) * lukujav2.length);
   arvontav4 = Math.floor(arvontav3 * 10);
   console.log(arvontav4);
   console.log("yläosu");
-vx *= -1;
+vx *= 1;
 if(ball.y > käyttäjä.y && ball.y < käyttäjä.y + käyttäjä.height)
 {
-vx *= 1;
+vx *= -1;
+
+
  }
 }
 
@@ -194,14 +197,12 @@ vx *= 1
 
  }
 }
-// bugikorjauksia
-/* työ paskana ei toimi
-if(ball.x > käyttäjä.x && ball.x < käyttäjä.x  + käyttäjä.width && ball.y > käyttäjä.y - käyttäjä.width && ball.y < käyttäjä.y + käyttäjä.height ){
+/*
+if(ball.x > käyttäjä.x && ball.x < käyttäjä.x + käyttäjä.width && ball.y > käyttäjä.y - käyttäjä.width && ball.y < käyttäjä.y + käyttäjä.height ){
 console.log("huora");
-vx *= -1;
 vy *= -1;
-}
-*/
+vx *= -1;
+}*/
 }
 function käyttäjäliike(){
 

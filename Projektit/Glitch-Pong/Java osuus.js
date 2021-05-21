@@ -66,11 +66,11 @@ käyttäjä.y += 100;
 
   document.addEventListener('keydown', function(event) {
       if(event.keyCode == 	38) {
-  käyttäjä.y += -100
+  käyttäjä.y += -100;
 
       }
       else if(event.keyCode == 	40) {
-  käyttäjä.y += 100
+  käyttäjä.y += 100;
 
       }
   });

@@ -4,6 +4,16 @@
   transform: translate(-50%, -50%);
 }
 
+body {
+  background-color: lime;
+}
+
+.otsikko {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  text-align: center;
+  font-size: 40px;
+}
+
 button {
   position: relative;
   top: 50%; left: 50%;

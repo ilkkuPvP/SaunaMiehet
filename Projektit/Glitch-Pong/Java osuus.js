@@ -169,19 +169,17 @@ https://www.youtube.com/watch?v=GpM8yvDP21o mite collision detection tehää
 ja pystyin helposti poimimaan pää asiat javascriptiin).*/
 
 
-if(ball.x > käyttäjä.x && ball.x < käyttäjä.x + käyttäjä.width)
+if(ball.x > käyttäjä.x && ball.x < käyttäjä.x + käyttäjä.width && ball.y > käyttäjä.y - käyttäjä.width && ball.y < käyttäjä.y + käyttäjä.height)
 {
   lukujav2 = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "110", "120", "130", "150", "160", "170", "180"];
   arvontav3 = Math.floor(Math.random(lukujav2) * lukujav2.length);
   arvontav4 = Math.floor(arvontav3 * 10);
   console.log(arvontav4);
   console.log("yläosu");
-vx *= 1;
+vx *= -1;
 if(ball.y > käyttäjä.y && ball.y < käyttäjä.y + käyttäjä.height)
 {
-vx *= -1;
-
-
+vx *= 1;
  }
 }
 
@@ -197,11 +195,13 @@ vx *= 1
  }
 }
 // bugikorjauksia
-if(ball.x > käyttäjä.x && ball.x < käyttäjä.x + käyttäjä.width && ball.y > käyttäjä.y - käyttäjä.width && ball.y < käyttäjä.y + käyttäjä.height ){
+/* työ paskana ei toimi
+if(ball.x > käyttäjä.x && ball.x < käyttäjä.x  + käyttäjä.width && ball.y > käyttäjä.y - käyttäjä.width && ball.y < käyttäjä.y + käyttäjä.height ){
 console.log("huora");
-vy *= -1;
 vx *= -1;
+vy *= -1;
 }
+*/
 }
 function käyttäjäliike(){
 

@@ -183,6 +183,7 @@ if(ball.y > käyttäjä.y && ball.y < käyttäjä.y + käyttäjä.height)
 vx *= -1;
 
 
+
  }
 }
 
@@ -197,12 +198,17 @@ vx *= 1
 
  }
 }
-/*
-if(ball.x > käyttäjä.x && ball.x < käyttäjä.x + käyttäjä.width && ball.y > käyttäjä.y - käyttäjä.width && ball.y < käyttäjä.y + käyttäjä.height ){
-console.log("huora");
+
+if( ball.x < käyttäjä.x + käyttäjä.width && ball.y < käyttäjä.y && ball.y + ball.r > käyttäjä.y){
+console.log("ylä k touch");
 vy *= -1;
 vx *= -1;
-}*/
+}
+if ( ball.x < käyttäjä.x + käyttäjä.width && ball.y > käyttäjä.y + käyttäjä.height && ball.y - ball.r < käyttäjä.y + käyttäjä.height){
+console.log("ala ktouch")
+vy *= -1;
+vx *= -1;
+}
 }
 function käyttäjäliike(){
 

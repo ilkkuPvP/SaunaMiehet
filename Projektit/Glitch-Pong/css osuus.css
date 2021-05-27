@@ -5,7 +5,9 @@
 }
 
 body {
-  background-color: lime;
+  background-color: lightgray;
+  background-image: url("mursu 4k.jpg");
+  background-size: cover;
 }
 
 .otsikko {

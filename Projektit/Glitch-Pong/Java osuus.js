@@ -115,7 +115,6 @@ color : "BLACK",
 
 var vx = 15;
 var vy = 12;
-var laskin = 0;
 
 var arvontav4 = 10;
 var luvut;
@@ -138,25 +137,23 @@ lukujav2 = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "110", 
 arvontav3 = Math.floor(Math.random(lukujav2) * lukujav2.length);
 arvontav4 = Math.floor(arvontav3 * 10);
 console.log(arvontav4);
-
 }
 
 // tää pitää saaha epä trueks
 if((ball.x + ball.r > h) && (ball.y - ball.r > vastustaja.y + vastustaja.height  || ball.y + ball.r < vastustaja.y - 12)){
 käyttäjä.score += 1;
-laskin += 1;
 vx *= 1;
 }
 
 // lattia
-if (ball.y  > canvas.height){
+if (ball.y + ball.r > canvas.height){
 
 vy *= -1;
 }
 
 // katto
 
-if (ball.y < canvas.height - canvas.height){
+if (ball.y + ball.r < canvas.height - canvas.height){
 
 vy *= -1;
 }
@@ -178,7 +175,7 @@ if(ball.x > käyttäjä.x && ball.x < käyttäjä.x + käyttäjä.width)
   console.log(arvontav4);
   console.log("yläosu");
 vx *= 1;
-if(ball.y > käyttäjä.y && ball.y < käyttäjä.y + käyttäjä.height)
+if(ball.y + ball.r > käyttäjä.y && ball.y < käyttäjä.y + käyttäjä.height)
 {
 vx *= -1;
 
@@ -202,7 +199,7 @@ vx *= 1
 if( ball.x < käyttäjä.x + käyttäjä.width && ball.y < käyttäjä.y && ball.y + ball.r > käyttäjä.y){
 console.log("ylä k touch");
 vy *= -1;
-vx *= -1;
+vx *= 1;
 }
 if ( ball.x < käyttäjä.x + käyttäjä.width && ball.y > käyttäjä.y + käyttäjä.height && ball.y - ball.r < käyttäjä.y + käyttäjä.height){
 console.log("ala ktouch")
@@ -232,7 +229,6 @@ drawRect(vastustaja.x, vastustaja.y, vastustaja.width, vastustaja.height, vastus
 käyttäjäliike();
 }
 function Uusi(){
-laskin = 0;
 vx *= 1;
 vy *= 1;
 
@@ -243,7 +239,7 @@ vastustaja.score = 0;
 }
 
 function peli(){
-  if(laskin < 5){
+  if(vastustaja.score < 5 && käyttäjä.score < 5){
 
 renderöinti();
 

@@ -130,12 +130,13 @@ ball.y += vy;
 
 
 if((ball.x + ball.r < 0) && (ball.x + ball.r < käyttäjä.width)){
-vx *= -1;
 vastustaja.score += 1;
 lukujav2 = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "110", "120", "130", "150", "160", "170", "180"];
 arvontav3 = Math.floor(Math.random(lukujav2) * lukujav2.length);
 arvontav4 = Math.floor(arvontav3 * 10);
 console.log(arvontav4);
+console.log("seinään osu");
+vx *= -1;
 }
 
 // tää pitää saaha epä trueks
@@ -202,7 +203,17 @@ vx *= 1;
 }
 if ( ball.x < käyttäjä.x + käyttäjä.width && ball.y > käyttäjä.y + käyttäjä.height && ball.y - ball.r < käyttäjä.y + käyttäjä.height){
 console.log("ala ktouch")
-vy *= -1;
+vy *= 1;
+vx *= -1;
+}
+if (ball.x < käyttäjä.x + käyttäjä.width && ball.y > käyttäjä.y && ball.y < käyttäjä.y + käyttäjä.height){
+console.log("clitch");
+
+vx *= -1;
+
+console.log(vy);
+}
+if (ball.x < käyttäjä.x + käyttäjä.width && ball.y < käyttäjä.y && ball.y > käyttäjä.y + käyttäjä.height && ball.x + ball.r > 10){
 vx *= -1;
 }
 }
@@ -237,6 +248,9 @@ käyttäjä.score = 0;
 vastustaja.score = 0;
 }
 
+if (ball.x + ball.r < 0){
+vx *= -1;
+}
 function peli(){
   if(vastustaja.score < 5 && käyttäjä.score < 5){
 

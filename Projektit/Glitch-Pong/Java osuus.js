@@ -128,7 +128,6 @@ function pallonliike(){
 ball.x += vx;
 ball.y += vy;
 
-// Oikea seinä
 
 if((ball.x + ball.r < 0) && (ball.x + ball.r < käyttäjä.width)){
 vx *= -1;
@@ -246,8 +245,7 @@ renderöinti();
 }
 }
 
-alert("pallo saattaaa sit mennä käyttäjän laatan sisälle ja rikkoa pelin että pvp elä hupata siitä si :D. Eläkä siitä että ohjaus on paskaa ja joo käytän nyt alertteja ku beta versiossa ei oo kunno lobbya")
-alert("Ohjeet on up arrowi nii käyttäjä menee ylöspäin ja down arrowi nii menee alaspäin. Wasd ei ole vielä :D. Mut joo alota peli sulkemalla ikkuna ")
+
 const framePerSecond = 50;
 
 

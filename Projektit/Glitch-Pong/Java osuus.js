@@ -25,7 +25,6 @@ context.arc(x, y, r, 0, Math.PI*2, false);
 context.clearRect(0, 0, h, f);
 context.fill();
 context.closePath();
-pallonliike();
 }
 
 
@@ -236,6 +235,7 @@ drawRect(käyttäjä.x, käyttäjä.y, käyttäjä.width, käyttäjä.height, k�
 törmäys();
 drawRect(vastustaja.x, vastustaja.y, vastustaja.width, vastustaja.height, vastustaja.color);
 käyttäjäliike();
+pallonliike();
 }
 function Uusi(){
 vx *= 1;

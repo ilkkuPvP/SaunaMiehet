@@ -233,7 +233,6 @@ drawRect(verkko.x, verkko.y + i,verkko.width, verkko.height, verkko.color);
 }
 
 drawRect(käyttäjä.x, käyttäjä.y, käyttäjä.width, käyttäjä.height, käyttäjä.color);
-liikutus();
 törmäys();
 drawRect(vastustaja.x, vastustaja.y, vastustaja.width, vastustaja.height, vastustaja.color);
 käyttäjäliike();

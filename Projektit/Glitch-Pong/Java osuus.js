@@ -212,9 +212,6 @@ vx *= -1;
 
 console.log(vy);
 }
-if (ball.x < käyttäjä.x + käyttäjä.width && ball.y < käyttäjä.y && ball.y > käyttäjä.y + käyttäjä.height && ball.x + ball.r > 10){
-vx *= -1;
-}
 }
 function käyttäjäliike(){
 

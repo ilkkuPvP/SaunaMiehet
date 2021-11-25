@@ -13,7 +13,7 @@ namespace Hotellityö
         public string yhteyslause()
         {
             return "datasource=localhost; port=3306;username=root;password=;database=hotelli";
-
+            
         }
 
 

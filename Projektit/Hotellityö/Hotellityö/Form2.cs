@@ -61,7 +61,10 @@ namespace Hotellityö
                 }
                 else
                 {
-                    MessageBox.Show("Salasana tai käyttäjätunnus on väärin");
+                    MessageBox.Show("Salasana tai käyttäjätunnus on väärin, tee käyttäjätunnus, jos sinulle ei sitä vielä ole");
+                    Käyttäjätunnus.Text = "";
+                    Salasana.Text = "";
+
                 }
              
                    

@@ -53,7 +53,7 @@ namespace Hotellityö
                 {
 
 
-                    MessageBox.Show("Kirjautuminen onnistui");
+                    MessageBox.Show("Kirjautuminen onnistui", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     Form1 f1 = new Form1();
                     f1.ShowDialog();
@@ -61,7 +61,7 @@ namespace Hotellityö
                 }
                 else
                 {
-                    MessageBox.Show("Salasana tai käyttäjätunnus on väärin, tee käyttäjätunnus, jos sinulle ei sitä vielä ole");
+                    MessageBox.Show("Salasana tai käyttäjätunnus on väärin, tee käyttäjätunnus, jos sinulle ei sitä vielä ole", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Käyttäjätunnus.Text = "";
                     Salasana.Text = "";
 

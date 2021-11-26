@@ -42,14 +42,16 @@
             this.Maa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TietoTauluDG)).BeginInit();
             this.SuspendLayout();
             // 
             // Tyhjennä
             // 
-            this.Tyhjennä.Location = new System.Drawing.Point(504, 268);
+            this.Tyhjennä.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tyhjennä.Location = new System.Drawing.Point(660, 325);
             this.Tyhjennä.Name = "Tyhjennä";
-            this.Tyhjennä.Size = new System.Drawing.Size(75, 23);
+            this.Tyhjennä.Size = new System.Drawing.Size(128, 54);
             this.Tyhjennä.TabIndex = 0;
             this.Tyhjennä.Text = "Tyhjennä";
             this.Tyhjennä.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // 
             // Päivitä
             // 
-            this.Päivitä.Location = new System.Drawing.Point(423, 268);
+            this.Päivitä.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Päivitä.Location = new System.Drawing.Point(526, 325);
             this.Päivitä.Name = "Päivitä";
-            this.Päivitä.Size = new System.Drawing.Size(75, 23);
+            this.Päivitä.Size = new System.Drawing.Size(128, 54);
             this.Päivitä.TabIndex = 1;
             this.Päivitä.Text = "Päivitä";
             this.Päivitä.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // 
             // Poista
             // 
-            this.Poista.Location = new System.Drawing.Point(342, 268);
+            this.Poista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Poista.Location = new System.Drawing.Point(300, 325);
             this.Poista.Name = "Poista";
-            this.Poista.Size = new System.Drawing.Size(75, 23);
+            this.Poista.Size = new System.Drawing.Size(128, 54);
             this.Poista.TabIndex = 2;
             this.Poista.Text = "Poista";
             this.Poista.UseVisualStyleBackColor = true;
@@ -77,9 +81,10 @@
             // 
             // Tallenna
             // 
-            this.Tallenna.Location = new System.Drawing.Point(261, 268);
+            this.Tallenna.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tallenna.Location = new System.Drawing.Point(166, 325);
             this.Tallenna.Name = "Tallenna";
-            this.Tallenna.Size = new System.Drawing.Size(75, 23);
+            this.Tallenna.Size = new System.Drawing.Size(128, 54);
             this.Tallenna.TabIndex = 3;
             this.Tallenna.Text = "Tallenna";
             this.Tallenna.UseVisualStyleBackColor = true;
@@ -87,90 +92,109 @@
             // 
             // Sukunimi
             // 
-            this.Sukunimi.Location = new System.Drawing.Point(155, 112);
+            this.Sukunimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sukunimi.Location = new System.Drawing.Point(34, 137);
             this.Sukunimi.Name = "Sukunimi";
-            this.Sukunimi.Size = new System.Drawing.Size(100, 20);
+            this.Sukunimi.Size = new System.Drawing.Size(100, 26);
             this.Sukunimi.TabIndex = 4;
             // 
             // Etunimi
             // 
-            this.Etunimi.Location = new System.Drawing.Point(155, 162);
+            this.Etunimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Etunimi.Location = new System.Drawing.Point(34, 189);
             this.Etunimi.Name = "Etunimi";
-            this.Etunimi.Size = new System.Drawing.Size(100, 20);
+            this.Etunimi.Size = new System.Drawing.Size(100, 26);
             this.Etunimi.TabIndex = 5;
             // 
             // TietoTauluDG
             // 
             this.TietoTauluDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TietoTauluDG.Location = new System.Drawing.Point(261, 112);
+            this.TietoTauluDG.Location = new System.Drawing.Point(166, 80);
             this.TietoTauluDG.Name = "TietoTauluDG";
-            this.TietoTauluDG.Size = new System.Drawing.Size(318, 150);
+            this.TietoTauluDG.Size = new System.Drawing.Size(622, 239);
             this.TietoTauluDG.TabIndex = 6;
             // 
             // ID
             // 
             this.ID.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ID.Location = new System.Drawing.Point(389, 86);
+            this.ID.Location = new System.Drawing.Point(34, 91);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(100, 20);
             this.ID.TabIndex = 7;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(187, 146);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 166);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(148, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Sukunimi";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 93);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Etunimi";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Puhelinnumero
             // 
-            this.Puhelinnumero.Location = new System.Drawing.Point(155, 209);
+            this.Puhelinnumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Puhelinnumero.Location = new System.Drawing.Point(34, 241);
             this.Puhelinnumero.Name = "Puhelinnumero";
-            this.Puhelinnumero.Size = new System.Drawing.Size(100, 20);
+            this.Puhelinnumero.Size = new System.Drawing.Size(100, 26);
             this.Puhelinnumero.TabIndex = 10;
             // 
             // Maa
             // 
-            this.Maa.Location = new System.Drawing.Point(155, 251);
+            this.Maa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Maa.Location = new System.Drawing.Point(34, 293);
             this.Maa.Name = "Maa";
-            this.Maa.Size = new System.Drawing.Size(100, 20);
+            this.Maa.Size = new System.Drawing.Size(100, 26);
             this.Maa.TabIndex = 11;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(169, 193);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(8, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.Size = new System.Drawing.Size(148, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "Puhelinnumero";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(187, 235);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(8, 270);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.Size = new System.Drawing.Size(148, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Maa";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(8, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "ID";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 408);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Maa);
@@ -209,6 +233,7 @@
         private System.Windows.Forms.TextBox Maa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

@@ -16,5 +16,20 @@ namespace Hotellityö
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Uusi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Huoneet_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

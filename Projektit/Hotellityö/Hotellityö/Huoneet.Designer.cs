@@ -28,108 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Uusi = new System.Windows.Forms.Button();
+            this.Päivitä = new System.Windows.Forms.Button();
+            this.Poista = new System.Windows.Forms.Button();
+            this.Numero = new System.Windows.Forms.Label();
+            this.Puhelinnumero = new System.Windows.Forms.Label();
+            this.Onkovarattu = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Puhelin = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Kyllä = new System.Windows.Forms.RadioButton();
+            this.Ei = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Uusi
             // 
-            this.button1.Location = new System.Drawing.Point(299, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Uusi.Location = new System.Drawing.Point(299, 286);
+            this.Uusi.Name = "Uusi";
+            this.Uusi.Size = new System.Drawing.Size(75, 23);
+            this.Uusi.TabIndex = 0;
+            this.Uusi.Text = "Uusi";
+            this.Uusi.UseVisualStyleBackColor = true;
+            this.Uusi.Click += new System.EventHandler(this.Uusi_Click);
             // 
-            // button2
+            // Päivitä
             // 
-            this.button2.Location = new System.Drawing.Point(381, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Päivitä.Location = new System.Drawing.Point(381, 285);
+            this.Päivitä.Name = "Päivitä";
+            this.Päivitä.Size = new System.Drawing.Size(75, 23);
+            this.Päivitä.TabIndex = 1;
+            this.Päivitä.Text = "Päivitä";
+            this.Päivitä.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Poista
             // 
-            this.button3.Location = new System.Drawing.Point(371, 316);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Poista.Location = new System.Drawing.Point(462, 286);
+            this.Poista.Name = "Poista";
+            this.Poista.Size = new System.Drawing.Size(75, 23);
+            this.Poista.TabIndex = 2;
+            this.Poista.Text = "Poista";
+            this.Poista.UseVisualStyleBackColor = true;
+            this.Poista.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label1
+            // Numero
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(325, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.Numero.AutoSize = true;
+            this.Numero.Location = new System.Drawing.Point(89, 126);
+            this.Numero.Name = "Numero";
+            this.Numero.Size = new System.Drawing.Size(86, 13);
+            this.Numero.TabIndex = 3;
+            this.Numero.Text = "Huoneennumero";
             // 
-            // label2
+            // Puhelinnumero
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(324, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.Puhelinnumero.AutoSize = true;
+            this.Puhelinnumero.Location = new System.Drawing.Point(98, 149);
+            this.Puhelinnumero.Name = "Puhelinnumero";
+            this.Puhelinnumero.Size = new System.Drawing.Size(77, 13);
+            this.Puhelinnumero.TabIndex = 4;
+            this.Puhelinnumero.Text = "Puhelinnumero";
             // 
-            // label3
+            // Onkovarattu
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(325, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "label3";
+            this.Onkovarattu.AutoSize = true;
+            this.Onkovarattu.Location = new System.Drawing.Point(108, 174);
+            this.Onkovarattu.Name = "Onkovarattu";
+            this.Onkovarattu.Size = new System.Drawing.Size(66, 13);
+            this.Onkovarattu.TabIndex = 5;
+            this.Onkovarattu.Text = "Onkovarattu";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(324, 201);
+            this.label4.Location = new System.Drawing.Point(108, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "label4";
             // 
-            // textBox1
+            // Puhelin
             // 
-            this.textBox1.Location = new System.Drawing.Point(371, 201);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(371, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(371, 145);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.Puhelin.Location = new System.Drawing.Point(181, 149);
+            this.Puhelin.Name = "Puhelin";
+            this.Puhelin.Size = new System.Drawing.Size(100, 20);
+            this.Puhelin.TabIndex = 8;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(371, 120);
+            this.textBox4.Location = new System.Drawing.Point(181, 123);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 10;
@@ -137,30 +125,53 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(511, 120);
+            this.dataGridView1.Location = new System.Drawing.Point(287, 53);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(372, 226);
             this.dataGridView1.TabIndex = 11;
+            // 
+            // Kyllä
+            // 
+            this.Kyllä.AutoSize = true;
+            this.Kyllä.Location = new System.Drawing.Point(181, 175);
+            this.Kyllä.Name = "Kyllä";
+            this.Kyllä.Size = new System.Drawing.Size(47, 17);
+            this.Kyllä.TabIndex = 12;
+            this.Kyllä.TabStop = true;
+            this.Kyllä.Text = "Kyllä\r\n";
+            this.Kyllä.UseVisualStyleBackColor = true;
+            // 
+            // Ei
+            // 
+            this.Ei.AutoSize = true;
+            this.Ei.Location = new System.Drawing.Point(181, 198);
+            this.Ei.Name = "Ei";
+            this.Ei.Size = new System.Drawing.Size(34, 17);
+            this.Ei.TabIndex = 13;
+            this.Ei.TabStop = true;
+            this.Ei.Text = "Ei";
+            this.Ei.UseVisualStyleBackColor = true;
             // 
             // Huoneet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Ei);
+            this.Controls.Add(this.Kyllä);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Puhelin);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Onkovarattu);
+            this.Controls.Add(this.Puhelinnumero);
+            this.Controls.Add(this.Numero);
+            this.Controls.Add(this.Poista);
+            this.Controls.Add(this.Päivitä);
+            this.Controls.Add(this.Uusi);
             this.Name = "Huoneet";
             this.Text = "Huoneet";
+            this.Load += new System.EventHandler(this.Huoneet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -169,17 +180,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Uusi;
+        private System.Windows.Forms.Button Päivitä;
+        private System.Windows.Forms.Button Poista;
+        private System.Windows.Forms.Label Numero;
+        private System.Windows.Forms.Label Puhelinnumero;
+        private System.Windows.Forms.Label Onkovarattu;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Puhelin;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.RadioButton Kyllä;
+        private System.Windows.Forms.RadioButton Ei;
     }
 }

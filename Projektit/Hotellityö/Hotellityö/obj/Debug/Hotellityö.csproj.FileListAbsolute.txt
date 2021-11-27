@@ -96,3 +96,4 @@ C:\Users\Samuh\Desktop\hotelli\SaunaMiehet\Projektit\Hotellityö\Hotellityö\obj
 C:\Users\Samuh\Desktop\hotelli\SaunaMiehet\Projektit\Hotellityö\Hotellityö\obj\Debug\Hotellityö.exe
 C:\Users\Samuh\Desktop\hotelli\SaunaMiehet\Projektit\Hotellityö\Hotellityö\obj\Debug\Hotellityö.pdb
 C:\Users\Samuh\Desktop\hotelli\SaunaMiehet\Projektit\Hotellityö\Hotellityö\obj\Debug\Hotellityö.Pää.resources
+C:\Users\Samuh\Desktop\hotelli\SaunaMiehet\Projektit\Hotellityö\Hotellityö\obj\Debug\Hotellityö.Huoneet.resources

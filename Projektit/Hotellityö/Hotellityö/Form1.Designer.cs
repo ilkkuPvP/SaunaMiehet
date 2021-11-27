@@ -97,6 +97,7 @@
             this.Sukunimi.Name = "Sukunimi";
             this.Sukunimi.Size = new System.Drawing.Size(100, 26);
             this.Sukunimi.TabIndex = 4;
+            this.Sukunimi.TextChanged += new System.EventHandler(this.Sukunimi_TextChanged);
             // 
             // Etunimi
             // 

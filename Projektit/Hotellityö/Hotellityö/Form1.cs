@@ -11,11 +11,19 @@ using MySql.Data.MySqlClient;
 
 namespace Hotellityö
 {
+
     public partial class Form1 : Form
     {
+        private MainMenu mainMenu;
+
+
         public Form1()
         {
-            InitializeComponent();
+
+            
+                InitializeComponent();
+
+            
         }
 
         toinen opiskelija = new toinen();
@@ -69,6 +77,11 @@ namespace Hotellityö
 
    
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sukunimi_TextChanged(object sender, EventArgs e)
         {
 
         }

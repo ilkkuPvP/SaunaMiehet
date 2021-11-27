@@ -60,10 +60,28 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Huoneet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Huoneet.Designer.cs">
+      <DependentUpon>Huoneet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pää.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pää.Designer.cs">
+      <DependentUpon>Pää.cs</DependentUpon>
+    </Compile>
     <Compile Include="toinen.cs" />
     <Compile Include="Uusikäyttis.cs" />
+    <Compile Include="Varaukset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Varaukset.Designer.cs">
+      <DependentUpon>Varaukset.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Pää.resx">
+      <DependentUpon>Pää.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

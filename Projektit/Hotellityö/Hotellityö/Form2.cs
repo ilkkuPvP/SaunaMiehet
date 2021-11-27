@@ -55,7 +55,7 @@ namespace Hotellityö
 
                     MessageBox.Show("Kirjautuminen onnistui", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    Form1 f1 = new Form1();
+                    Pää f1 = new Pää();
                     f1.ShowDialog();
 
                 }

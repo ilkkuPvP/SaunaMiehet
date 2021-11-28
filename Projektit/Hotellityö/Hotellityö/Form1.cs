@@ -39,7 +39,7 @@ namespace Hotellityö
             }
             else
             {
-                Boolean lisaaAsiakas = opiskelija.lisaaOpiskelija(enimi, snimi, puh, maa);
+                /*Boolean lisaaAsiakas = */ opiskelija.lisaaOpiskelija(enimi, snimi, puh, maa);
                 /*
                 if (lisaaAsiakas)
                 {
@@ -106,12 +106,23 @@ namespace Hotellityö
 
         private void TietoTauluDG_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+            if (TietoTauluDG.Rows[e.RowIndex].Cells[0].Value == null)
+            {
+                ID.Text = "";
+                Sukunimi.Text = "";
+                Etunimi.Text = "";
+                Puhelinnumero.Text = "";
+                Maa.Text = "";
+            }
+            else
+            {
 
-            ID.Text = TietoTauluDG.Rows[e.RowIndex].Cells[0].Value.ToString();
-            Etunimi.Text = TietoTauluDG.Rows[e.RowIndex].Cells[1].Value.ToString();
-            Sukunimi.Text = TietoTauluDG.Rows[e.RowIndex].Cells[2].Value.ToString();
-            Puhelinnumero.Text = TietoTauluDG.Rows[e.RowIndex].Cells[3].Value.ToString();
-            Maa.Text = TietoTauluDG.Rows[e.RowIndex].Cells[4].Value.ToString();
+                ID.Text = TietoTauluDG.Rows[e.RowIndex].Cells[0].Value.ToString();
+                Etunimi.Text = TietoTauluDG.Rows[e.RowIndex].Cells[1].Value.ToString();
+                Sukunimi.Text = TietoTauluDG.Rows[e.RowIndex].Cells[2].Value.ToString();
+                Puhelinnumero.Text = TietoTauluDG.Rows[e.RowIndex].Cells[3].Value.ToString();
+                Maa.Text = TietoTauluDG.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
         }
     }
 }

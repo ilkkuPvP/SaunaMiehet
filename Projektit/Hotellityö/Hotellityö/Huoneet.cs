@@ -30,7 +30,7 @@ namespace Hotellityö
 
         private void Uusi_Click(object sender, EventArgs e)
         {
-            Uus.Huone(Num.Text, Puhelin.Text, Onko, huone);
+            Uus.Huone(Num.Text, huone, Puhelin.Text, Onko);
            Taulu.DataSource = Uus.HaeOpiskelijahuoneista();
         }
 

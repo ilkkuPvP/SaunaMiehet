@@ -14,7 +14,6 @@ namespace Hotellityö
 
     public partial class Form1 : Form
     {
-        private MainMenu mainMenu;
 
 
         public Form1()

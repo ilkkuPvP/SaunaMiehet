@@ -36,11 +36,14 @@
             this.Onkovarattu = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Puhelin = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Num = new System.Windows.Forms.TextBox();
+            this.Taulu = new System.Windows.Forms.DataGridView();
             this.Kyllä = new System.Windows.Forms.RadioButton();
             this.Ei = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.Taulu)).BeginInit();
             this.SuspendLayout();
             // 
             // Uusi
@@ -61,6 +64,7 @@
             this.Päivitä.TabIndex = 1;
             this.Päivitä.Text = "Päivitä";
             this.Päivitä.UseVisualStyleBackColor = true;
+            this.Päivitä.Click += new System.EventHandler(this.Päivitä_Click);
             // 
             // Poista
             // 
@@ -102,11 +106,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(108, 233);
+            this.label4.Location = new System.Drawing.Point(98, 257);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(66, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
+            this.label4.Text = "Huonetyyppi";
             // 
             // Puhelin
             // 
@@ -115,20 +119,21 @@
             this.Puhelin.Size = new System.Drawing.Size(100, 20);
             this.Puhelin.TabIndex = 8;
             // 
-            // textBox4
+            // Num
             // 
-            this.textBox4.Location = new System.Drawing.Point(181, 123);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 10;
+            this.Num.Location = new System.Drawing.Point(181, 123);
+            this.Num.Name = "Num";
+            this.Num.Size = new System.Drawing.Size(100, 20);
+            this.Num.TabIndex = 10;
+            this.Num.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // dataGridView1
+            // Taulu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(287, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(372, 226);
-            this.dataGridView1.TabIndex = 11;
+            this.Taulu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Taulu.Location = new System.Drawing.Point(287, 53);
+            this.Taulu.Name = "Taulu";
+            this.Taulu.Size = new System.Drawing.Size(372, 226);
+            this.Taulu.TabIndex = 11;
             // 
             // Kyllä
             // 
@@ -140,6 +145,7 @@
             this.Kyllä.TabStop = true;
             this.Kyllä.Text = "Kyllä\r\n";
             this.Kyllä.UseVisualStyleBackColor = true;
+            this.Kyllä.CheckedChanged += new System.EventHandler(this.Kyllä_CheckedChanged);
             // 
             // Ei
             // 
@@ -151,16 +157,56 @@
             this.Ei.TabStop = true;
             this.Ei.Text = "Ei";
             this.Ei.UseVisualStyleBackColor = true;
+            this.Ei.CheckedChanged += new System.EventHandler(this.Ei_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(181, 233);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(51, 17);
+            this.radioButton1.TabIndex = 14;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Yksiö";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(181, 257);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(43, 17);
+            this.radioButton2.TabIndex = 15;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Pari";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(181, 281);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(53, 17);
+            this.radioButton3.TabIndex = 16;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Perhe";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // Huoneet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.Ei);
             this.Controls.Add(this.Kyllä);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Taulu);
+            this.Controls.Add(this.Num);
             this.Controls.Add(this.Puhelin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Onkovarattu);
@@ -172,7 +218,7 @@
             this.Name = "Huoneet";
             this.Text = "Huoneet";
             this.Load += new System.EventHandler(this.Huoneet_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Taulu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,9 +234,12 @@
         private System.Windows.Forms.Label Onkovarattu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Puhelin;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox Num;
+        private System.Windows.Forms.DataGridView Taulu;
         private System.Windows.Forms.RadioButton Kyllä;
         private System.Windows.Forms.RadioButton Ei;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }

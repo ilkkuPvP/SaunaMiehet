@@ -130,11 +130,11 @@ namespace Hotellityö
         public bool poistaHuone(string huone)
         {
             MySqlCommand komento = new MySqlCommand();
-            string poistokysely = "DELETE FROM huoneet WHERE ID = @huon";
+            string poistokysely = "DELETE FROM huoneet WHERE huoneennumero = @huon";
             komento.CommandText = poistokysely;
             komento.Connection = yhteys.otaYhteys();
 
-            komento.Parameters.Add("@ktu", MySqlDbType.UInt32).Value = huone;
+            komento.Parameters.Add("@huon", MySqlDbType.UInt32).Value = huone;
 
 
             yhteys.avaaYhteys();

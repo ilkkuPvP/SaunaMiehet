@@ -104,6 +104,7 @@ namespace Hotellityö
 
         public bool poistaOpiskelija(string ktunnus)
         {
+
             MySqlCommand komento = new MySqlCommand();
             string poistokysely = "DELETE FROM hotelliyhteystiedot WHERE ID = @ktu";
             komento.CommandText = poistokysely;

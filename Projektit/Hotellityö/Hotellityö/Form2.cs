@@ -17,12 +17,6 @@ namespace Hotellityö
             InitializeComponent();
         }
         Uusikäyttis Uus = new Uusikäyttis();
-      
-
-        private void Käyttäjätunnus_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Salasana_TextChanged(object sender, EventArgs e)
         {
@@ -31,15 +25,17 @@ namespace Hotellityö
 
         private void Uusisalasana_Click(object sender, EventArgs e)
         {
-            if (Käyttäjätunnus.Text.Length > 0)
+            if (Käyttäjätunnus.Text != "" && Salasana.Text != "")
             {
                 Uus.uusikäyttäjä(Käyttäjätunnus.Text, Salasana.Text);
+                MessageBox.Show("Rekisteröityminen onnistui, voit nyt kirjautua sisään.", "Rekisteröityminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Käyttäjätunnus.Text = "";
                 Salasana.Text = "";
             }
             else
             {
-                MessageBox.Show("Kirjoita kenttään käyttäjätunnus ja salasana, niin ohjelma tekee uuudet tunnukset");
+                //  "Kirjoita kenttään käyttäjätunnus ja salasana, niin ohjelma tekee uuudet tunnukset"
+                MessageBox.Show("Käyttäjätunnus tai salasana puuttuu", "Rekisteröityminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -47,7 +43,7 @@ namespace Hotellityö
         private void Tarkistus_Click(object sender, EventArgs e)
         {
        
-            if (Käyttäjätunnus.Text.Length > 0 && Salasana.Text.Length > 0)
+            if (Käyttäjätunnus.Text != "" && Salasana.Text != "")
             {
                 if(Uus.käyttis(Käyttäjätunnus.Text, Salasana.Text) == true)
                 {
@@ -56,27 +52,29 @@ namespace Hotellityö
                     MessageBox.Show("Kirjautuminen onnistui", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     Pää f1 = new Pää();
-                    f1.ShowDialog();
-
+                    f1.Show();
+                    
+                    
+                    
+                    //Form2 form2 = (Form2)Application.OpenForms["Form2"];
+                    //form2.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Salasana tai käyttäjätunnus on väärin, tee käyttäjätunnus, jos sinulle ei sitä vielä ole", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Käyttäjätunnus tai salasana virheellinen. Rekisteröidy, jos sinulla ei vielä ole tunnuksia.", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Käyttäjätunnus.Text = "";
                     Salasana.Text = "";
 
                 }
              
-                   
-                   
-
-
-              
+            }
+            else
+            {
+                MessageBox.Show("Käyttäjätunnus tai salasana virheellinen. Rekisteröidy, jos sinulla ei vielä ole tunnuksia.", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Käyttäjätunnus.Text = "";
+                Salasana.Text = "";
             }
             
         }
-    
-    
-      
     }
 }

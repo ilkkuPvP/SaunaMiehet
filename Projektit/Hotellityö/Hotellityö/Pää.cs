@@ -12,6 +12,7 @@ namespace Hotellityö
 {
     public partial class Pää : Form
     {
+
         public Pää()
         {
             InitializeComponent();
@@ -31,10 +32,10 @@ namespace Hotellityö
 
         }
 
-        private void varauksetToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Pää_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Varaukset f3 = new Varaukset();
-            f3.ShowDialog();
+            Form2 form2 = (Form2)Application.OpenForms["Form2"];
+            form2.Close();
         }
     }
 }

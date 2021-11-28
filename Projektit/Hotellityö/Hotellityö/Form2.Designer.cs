@@ -43,7 +43,6 @@
             this.Käyttäjätunnus.Name = "Käyttäjätunnus";
             this.Käyttäjätunnus.Size = new System.Drawing.Size(271, 35);
             this.Käyttäjätunnus.TabIndex = 0;
-            this.Käyttäjätunnus.TextChanged += new System.EventHandler(this.Käyttäjätunnus_TextChanged);
             // 
             // Salasana
             // 
@@ -109,7 +108,7 @@
             this.Controls.Add(this.Salasana);
             this.Controls.Add(this.Käyttäjätunnus);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Kirjautuminen";
             this.ResumeLayout(false);
             this.PerformLayout();
 

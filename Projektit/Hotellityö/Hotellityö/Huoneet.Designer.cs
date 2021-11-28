@@ -43,14 +43,17 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Taulu)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Uusi
             // 
-            this.Uusi.Location = new System.Drawing.Point(299, 286);
+            this.Uusi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Uusi.Location = new System.Drawing.Point(166, 325);
             this.Uusi.Name = "Uusi";
-            this.Uusi.Size = new System.Drawing.Size(75, 23);
+            this.Uusi.Size = new System.Drawing.Size(128, 54);
             this.Uusi.TabIndex = 0;
             this.Uusi.Text = "Uusi";
             this.Uusi.UseVisualStyleBackColor = true;
@@ -58,19 +61,21 @@
             // 
             // Päivitä
             // 
-            this.Päivitä.Location = new System.Drawing.Point(381, 285);
+            this.Päivitä.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Päivitä.Location = new System.Drawing.Point(608, 325);
             this.Päivitä.Name = "Päivitä";
-            this.Päivitä.Size = new System.Drawing.Size(75, 23);
+            this.Päivitä.Size = new System.Drawing.Size(180, 54);
             this.Päivitä.TabIndex = 1;
-            this.Päivitä.Text = "Päivitä";
+            this.Päivitä.Text = "Päivitä näkymä";
             this.Päivitä.UseVisualStyleBackColor = true;
             this.Päivitä.Click += new System.EventHandler(this.Päivitä_Click);
             // 
             // Poista
             // 
-            this.Poista.Location = new System.Drawing.Point(462, 286);
+            this.Poista.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Poista.Location = new System.Drawing.Point(300, 325);
             this.Poista.Name = "Poista";
-            this.Poista.Size = new System.Drawing.Size(75, 23);
+            this.Poista.Size = new System.Drawing.Size(128, 54);
             this.Poista.TabIndex = 2;
             this.Poista.Text = "Poista";
             this.Poista.UseVisualStyleBackColor = true;
@@ -78,69 +83,77 @@
             // 
             // Numero
             // 
-            this.Numero.AutoSize = true;
-            this.Numero.Location = new System.Drawing.Point(89, 126);
+            this.Numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Numero.Location = new System.Drawing.Point(8, 73);
             this.Numero.Name = "Numero";
-            this.Numero.Size = new System.Drawing.Size(86, 13);
+            this.Numero.Size = new System.Drawing.Size(148, 20);
             this.Numero.TabIndex = 3;
-            this.Numero.Text = "Huoneennumero";
+            this.Numero.Text = "Huoneen numero:";
+            this.Numero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Puhelinnumero
             // 
-            this.Puhelinnumero.AutoSize = true;
-            this.Puhelinnumero.Location = new System.Drawing.Point(98, 149);
+            this.Puhelinnumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Puhelinnumero.Location = new System.Drawing.Point(8, 125);
             this.Puhelinnumero.Name = "Puhelinnumero";
-            this.Puhelinnumero.Size = new System.Drawing.Size(77, 13);
+            this.Puhelinnumero.Size = new System.Drawing.Size(148, 20);
             this.Puhelinnumero.TabIndex = 4;
-            this.Puhelinnumero.Text = "Puhelinnumero";
+            this.Puhelinnumero.Text = "Puhelinnumero:";
+            this.Puhelinnumero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Onkovarattu
             // 
-            this.Onkovarattu.AutoSize = true;
-            this.Onkovarattu.Location = new System.Drawing.Point(108, 174);
+            this.Onkovarattu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Onkovarattu.Location = new System.Drawing.Point(8, 177);
             this.Onkovarattu.Name = "Onkovarattu";
-            this.Onkovarattu.Size = new System.Drawing.Size(66, 13);
+            this.Onkovarattu.Size = new System.Drawing.Size(148, 20);
             this.Onkovarattu.TabIndex = 5;
-            this.Onkovarattu.Text = "Onkovarattu";
+            this.Onkovarattu.Text = "Onko varattu:";
+            this.Onkovarattu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 257);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(8, 223);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.Size = new System.Drawing.Size(148, 20);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Huonetyyppi";
+            this.label4.Text = "Huonetyyppi:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Puhelin
             // 
-            this.Puhelin.Location = new System.Drawing.Point(181, 149);
+            this.Puhelin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Puhelin.Location = new System.Drawing.Point(34, 148);
             this.Puhelin.Name = "Puhelin";
-            this.Puhelin.Size = new System.Drawing.Size(100, 20);
+            this.Puhelin.Size = new System.Drawing.Size(100, 26);
             this.Puhelin.TabIndex = 8;
             // 
             // Num
             // 
-            this.Num.Location = new System.Drawing.Point(181, 123);
+            this.Num.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Num.Location = new System.Drawing.Point(34, 96);
             this.Num.Name = "Num";
-            this.Num.Size = new System.Drawing.Size(100, 20);
+            this.Num.Size = new System.Drawing.Size(100, 26);
             this.Num.TabIndex = 10;
             this.Num.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // Taulu
             // 
             this.Taulu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Taulu.Location = new System.Drawing.Point(287, 53);
+            this.Taulu.Location = new System.Drawing.Point(166, 80);
             this.Taulu.Name = "Taulu";
-            this.Taulu.Size = new System.Drawing.Size(372, 226);
+            this.Taulu.Size = new System.Drawing.Size(622, 239);
             this.Taulu.TabIndex = 11;
+            this.Taulu.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Taulu_RowEnter);
             // 
             // Kyllä
             // 
             this.Kyllä.AutoSize = true;
-            this.Kyllä.Location = new System.Drawing.Point(181, 175);
+            this.Kyllä.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Kyllä.Location = new System.Drawing.Point(34, 200);
             this.Kyllä.Name = "Kyllä";
-            this.Kyllä.Size = new System.Drawing.Size(47, 17);
+            this.Kyllä.Size = new System.Drawing.Size(55, 20);
             this.Kyllä.TabIndex = 12;
             this.Kyllä.TabStop = true;
             this.Kyllä.Text = "Kyllä\r\n";
@@ -150,9 +163,10 @@
             // Ei
             // 
             this.Ei.AutoSize = true;
-            this.Ei.Location = new System.Drawing.Point(181, 198);
+            this.Ei.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ei.Location = new System.Drawing.Point(100, 200);
             this.Ei.Name = "Ei";
-            this.Ei.Size = new System.Drawing.Size(34, 17);
+            this.Ei.Size = new System.Drawing.Size(38, 20);
             this.Ei.TabIndex = 13;
             this.Ei.TabStop = true;
             this.Ei.Text = "Ei";
@@ -162,9 +176,10 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(181, 233);
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(19, 3);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 17);
+            this.radioButton1.Size = new System.Drawing.Size(60, 20);
             this.radioButton1.TabIndex = 14;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Yksiö";
@@ -174,35 +189,45 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(181, 257);
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(19, 27);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(43, 17);
+            this.radioButton2.Size = new System.Drawing.Size(67, 20);
             this.radioButton2.TabIndex = 15;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Pari";
+            this.radioButton2.Text = "Kaksio";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(181, 281);
+            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(19, 51);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(53, 17);
+            this.radioButton3.Size = new System.Drawing.Size(62, 20);
             this.radioButton3.TabIndex = 16;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Perhe";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.radioButton3);
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Location = new System.Drawing.Point(34, 246);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(100, 73);
+            this.panel1.TabIndex = 17;
+            // 
             // Huoneet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Ei);
             this.Controls.Add(this.Kyllä);
             this.Controls.Add(this.Taulu);
@@ -219,6 +244,8 @@
             this.Text = "Huoneet";
             this.Load += new System.EventHandler(this.Huoneet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Taulu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +268,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Panel panel1;
     }
 }

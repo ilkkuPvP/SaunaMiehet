@@ -21,7 +21,7 @@ namespace Hotellityö
       public bool uusikäyttäjä(string käyttäjä, string salasana)
         {
 
-            MySqlCommand tappaminen = new MySqlCommand();
+            //MySqlCommand tappaminen = new MySqlCommand();
          
 
             MySqlCommand komento = new MySqlCommand();
@@ -41,7 +41,7 @@ namespace Hotellityö
 
             komento.Parameters.Add("@käyt", MySqlDbType.VarChar).Value = käyttäjä;
             komento.Parameters.Add("@sala", MySqlDbType.VarChar).Value = salasana;
-            MessageBox.Show("Tunnukset tehty, voit nyt kirjautua tunnuksillasi");
+            
 
 
 
@@ -100,11 +100,13 @@ namespace Hotellityö
             }
         }
 
+        /*
 public bool testi()
         {
        
             return true;
         }
+        */
     
         public bool käyttäjä(string käyttäjä, string salasana) 
         {

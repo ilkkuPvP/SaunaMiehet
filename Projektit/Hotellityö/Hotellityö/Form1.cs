@@ -28,28 +28,42 @@ namespace Hotellityö
         toinen opiskelija = new toinen();
         private void button4_Click(object sender, EventArgs e)
         {
-            string enimi = Etunimi.Text;
-            string snimi = Sukunimi.Text;
+            string enimi = Sukunimi.Text;
+            string snimi = Etunimi.Text;
             string puh = Puhelinnumero.Text;
             string maa = Maa.Text;
 
-
-
-            Boolean lisaaAsiakas = opiskelija.lisaaOpiskelija(enimi, snimi, puh, maa);
-            if (lisaaAsiakas)
+            if (enimi == "" || snimi == "" || puh == "" || maa == "")
             {
-                Console.WriteLine("uusi opiskelija lisätty onnistuneesti", "Opiskelijan lisäys");
+                MessageBox.Show("Mainitsethan asiakkaan etunimen, sukunimen, puhelinnumeron ja maan.", "Asiakkaan lisääminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                Console.WriteLine("Ei voida lisätä");
+                Boolean lisaaAsiakas = opiskelija.lisaaOpiskelija(enimi, snimi, puh, maa);
+                /*
+                if (lisaaAsiakas)
+                {
+                    MessageBox.Show("Uusi opiskelija lisätty onnistuneesti", "Opiskelijan lisäys", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Uutta opiskelijaa ei voida lisätä", "Opiskelijan lisäys", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                */
+                TietoTauluDG.DataSource = opiskelija.HaeOpiskelija();
+
+                ID.Text = "";
+                Sukunimi.Text = "";
+                Etunimi.Text = "";
+                Puhelinnumero.Text = "";
+                Maa.Text = "";
             }
-            TietoTauluDG.DataSource = opiskelija.HaeOpiskelija();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Etunimi.Text = "";
+            ID.Text = "";
             Sukunimi.Text = "";
+            Etunimi.Text = "";
             Puhelinnumero.Text = "";
             Maa.Text = "";
         }
@@ -57,11 +71,22 @@ namespace Hotellityö
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if(ID.Text == "")
+            {
+                MessageBox.Show("ID-kohtaan poistettavan asiakkaan ID", "Asiakkaan poistaminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             string tunnus = ID.Text;
             if (opiskelija.poistaOpiskelija(tunnus))
             {
                 TietoTauluDG.DataSource = opiskelija.HaeOpiskelija();
+
+                ID.Text = "";
+                Sukunimi.Text = "";
+                Etunimi.Text = "";
+                Puhelinnumero.Text = "";
+                Maa.Text = "";
             }
             Tyhjennä.PerformClick();
         
@@ -74,15 +99,19 @@ namespace Hotellityö
             TietoTauluDG.DataSource = opiskelija.HaeOpiskelija();
         }
 
-   
-        private void label3_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-
+            TietoTauluDG.DataSource = opiskelija.HaeOpiskelija();
         }
 
-        private void Sukunimi_TextChanged(object sender, EventArgs e)
+        private void TietoTauluDG_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
 
+            ID.Text = TietoTauluDG.Rows[e.RowIndex].Cells[0].Value.ToString();
+            Etunimi.Text = TietoTauluDG.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Sukunimi.Text = TietoTauluDG.Rows[e.RowIndex].Cells[2].Value.ToString();
+            Puhelinnumero.Text = TietoTauluDG.Rows[e.RowIndex].Cells[3].Value.ToString();
+            Maa.Text = TietoTauluDG.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
     }
 }

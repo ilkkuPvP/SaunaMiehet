@@ -32,8 +32,8 @@
             this.Päivitä = new System.Windows.Forms.Button();
             this.Poista = new System.Windows.Forms.Button();
             this.Tallenna = new System.Windows.Forms.Button();
-            this.Sukunimi = new System.Windows.Forms.TextBox();
             this.Etunimi = new System.Windows.Forms.TextBox();
+            this.Sukunimi = new System.Windows.Forms.TextBox();
             this.TietoTauluDG = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             // Tyhjennä
             // 
             this.Tyhjennä.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tyhjennä.Location = new System.Drawing.Point(660, 325);
+            this.Tyhjennä.Location = new System.Drawing.Point(434, 325);
             this.Tyhjennä.Name = "Tyhjennä";
             this.Tyhjennä.Size = new System.Drawing.Size(128, 54);
             this.Tyhjennä.TabIndex = 0;
@@ -60,11 +60,11 @@
             // Päivitä
             // 
             this.Päivitä.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Päivitä.Location = new System.Drawing.Point(526, 325);
+            this.Päivitä.Location = new System.Drawing.Point(608, 325);
             this.Päivitä.Name = "Päivitä";
-            this.Päivitä.Size = new System.Drawing.Size(128, 54);
+            this.Päivitä.Size = new System.Drawing.Size(180, 54);
             this.Päivitä.TabIndex = 1;
-            this.Päivitä.Text = "Päivitä";
+            this.Päivitä.Text = "Päivitä näkymä";
             this.Päivitä.UseVisualStyleBackColor = true;
             this.Päivitä.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -90,22 +90,21 @@
             this.Tallenna.UseVisualStyleBackColor = true;
             this.Tallenna.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Sukunimi
-            // 
-            this.Sukunimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sukunimi.Location = new System.Drawing.Point(34, 137);
-            this.Sukunimi.Name = "Sukunimi";
-            this.Sukunimi.Size = new System.Drawing.Size(100, 26);
-            this.Sukunimi.TabIndex = 4;
-            this.Sukunimi.TextChanged += new System.EventHandler(this.Sukunimi_TextChanged);
-            // 
             // Etunimi
             // 
             this.Etunimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Etunimi.Location = new System.Drawing.Point(34, 189);
+            this.Etunimi.Location = new System.Drawing.Point(34, 137);
             this.Etunimi.Name = "Etunimi";
             this.Etunimi.Size = new System.Drawing.Size(100, 26);
-            this.Etunimi.TabIndex = 5;
+            this.Etunimi.TabIndex = 4;
+            // 
+            // Sukunimi
+            // 
+            this.Sukunimi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sukunimi.Location = new System.Drawing.Point(34, 189);
+            this.Sukunimi.Name = "Sukunimi";
+            this.Sukunimi.Size = new System.Drawing.Size(100, 26);
+            this.Sukunimi.TabIndex = 5;
             // 
             // TietoTauluDG
             // 
@@ -114,6 +113,7 @@
             this.TietoTauluDG.Name = "TietoTauluDG";
             this.TietoTauluDG.Size = new System.Drawing.Size(622, 239);
             this.TietoTauluDG.TabIndex = 6;
+            this.TietoTauluDG.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.TietoTauluDG_RowEnter);
             // 
             // ID
             // 
@@ -168,7 +168,6 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Puhelinnumero";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -204,14 +203,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.TietoTauluDG);
-            this.Controls.Add(this.Etunimi);
             this.Controls.Add(this.Sukunimi);
+            this.Controls.Add(this.Etunimi);
             this.Controls.Add(this.Tallenna);
             this.Controls.Add(this.Poista);
             this.Controls.Add(this.Päivitä);
             this.Controls.Add(this.Tyhjennä);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Asiakastiedot";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TietoTauluDG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,8 +224,8 @@
         private System.Windows.Forms.Button Päivitä;
         private System.Windows.Forms.Button Poista;
         private System.Windows.Forms.Button Tallenna;
-        private System.Windows.Forms.TextBox Sukunimi;
         private System.Windows.Forms.TextBox Etunimi;
+        private System.Windows.Forms.TextBox Sukunimi;
         private System.Windows.Forms.DataGridView TietoTauluDG;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label1;

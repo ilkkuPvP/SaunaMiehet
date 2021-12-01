@@ -33,14 +33,14 @@
             this.RekisteröityminenBT = new System.Windows.Forms.Button();
             this.SalasanaTB = new System.Windows.Forms.TextBox();
             this.RekisteröidyPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.KäyttäjäPanelTB = new System.Windows.Forms.TextBox();
             this.RekisteröidyPanelBT = new System.Windows.Forms.Button();
             this.TakaisinPanelBT = new System.Windows.Forms.Button();
             this.SalasanaPanelTB = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.RekisteröidyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +98,61 @@
             this.RekisteröidyPanel.TabIndex = 4;
             this.RekisteröidyPanel.Visible = false;
             // 
+            // KäyttäjäPanelTB
+            // 
+            this.KäyttäjäPanelTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KäyttäjäPanelTB.Location = new System.Drawing.Point(293, 198);
+            this.KäyttäjäPanelTB.Name = "KäyttäjäPanelTB";
+            this.KäyttäjäPanelTB.PasswordChar = '*';
+            this.KäyttäjäPanelTB.Size = new System.Drawing.Size(205, 35);
+            this.KäyttäjäPanelTB.TabIndex = 16;
+            // 
+            // RekisteröidyPanelBT
+            // 
+            this.RekisteröidyPanelBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RekisteröidyPanelBT.Location = new System.Drawing.Point(316, 252);
+            this.RekisteröidyPanelBT.Name = "RekisteröidyPanelBT";
+            this.RekisteröidyPanelBT.Size = new System.Drawing.Size(155, 47);
+            this.RekisteröidyPanelBT.TabIndex = 18;
+            this.RekisteröidyPanelBT.Text = "Rekisteröidy";
+            this.RekisteröidyPanelBT.UseVisualStyleBackColor = true;
+            // 
+            // TakaisinPanelBT
+            // 
+            this.TakaisinPanelBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TakaisinPanelBT.Location = new System.Drawing.Point(329, 306);
+            this.TakaisinPanelBT.Name = "TakaisinPanelBT";
+            this.TakaisinPanelBT.Size = new System.Drawing.Size(129, 48);
+            this.TakaisinPanelBT.TabIndex = 17;
+            this.TakaisinPanelBT.Text = "Takaisin";
+            this.TakaisinPanelBT.UseVisualStyleBackColor = true;
+            // 
+            // SalasanaPanelTB
+            // 
+            this.SalasanaPanelTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalasanaPanelTB.Location = new System.Drawing.Point(293, 129);
+            this.SalasanaPanelTB.Name = "SalasanaPanelTB";
+            this.SalasanaPanelTB.Size = new System.Drawing.Size(205, 35);
+            this.SalasanaPanelTB.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(293, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(205, 23);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Käyttäjätunnus:";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(293, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(205, 23);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Salasana:";
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,61 +170,6 @@
             this.label2.Size = new System.Drawing.Size(205, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Salasana:";
-            // 
-            // KäyttäjäPanelTB
-            // 
-            this.KäyttäjäPanelTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KäyttäjäPanelTB.Location = new System.Drawing.Point(298, 194);
-            this.KäyttäjäPanelTB.Name = "KäyttäjäPanelTB";
-            this.KäyttäjäPanelTB.PasswordChar = '*';
-            this.KäyttäjäPanelTB.Size = new System.Drawing.Size(205, 35);
-            this.KäyttäjäPanelTB.TabIndex = 16;
-            // 
-            // RekisteröidyPanelBT
-            // 
-            this.RekisteröidyPanelBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RekisteröidyPanelBT.Location = new System.Drawing.Point(321, 248);
-            this.RekisteröidyPanelBT.Name = "RekisteröidyPanelBT";
-            this.RekisteröidyPanelBT.Size = new System.Drawing.Size(155, 47);
-            this.RekisteröidyPanelBT.TabIndex = 18;
-            this.RekisteröidyPanelBT.Text = "Rekisteröidy";
-            this.RekisteröidyPanelBT.UseVisualStyleBackColor = true;
-            // 
-            // TakaisinPanelBT
-            // 
-            this.TakaisinPanelBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TakaisinPanelBT.Location = new System.Drawing.Point(334, 302);
-            this.TakaisinPanelBT.Name = "TakaisinPanelBT";
-            this.TakaisinPanelBT.Size = new System.Drawing.Size(129, 48);
-            this.TakaisinPanelBT.TabIndex = 17;
-            this.TakaisinPanelBT.Text = "Takaisin";
-            this.TakaisinPanelBT.UseVisualStyleBackColor = true;
-            // 
-            // SalasanaPanelTB
-            // 
-            this.SalasanaPanelTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalasanaPanelTB.Location = new System.Drawing.Point(298, 125);
-            this.SalasanaPanelTB.Name = "SalasanaPanelTB";
-            this.SalasanaPanelTB.Size = new System.Drawing.Size(205, 35);
-            this.SalasanaPanelTB.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(298, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 23);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Käyttäjätunnus:";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(298, 171);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 23);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Salasana:";
             // 
             // Form1
             // 

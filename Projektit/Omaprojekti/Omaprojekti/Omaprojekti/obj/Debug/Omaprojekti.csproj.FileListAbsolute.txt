@@ -21,3 +21,27 @@ C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaproj
 C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\MySql.Data.xml
 C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.exe.config
 C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.CopyComplete
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\Omaprojekti.exe.config
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\Omaprojekti.exe
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\Omaprojekti.pdb
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\MySql.Data.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\Google.Protobuf.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\ZstdNet.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\System.Memory.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\System.Buffers.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\MySql.Data.xml
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.AssemblyReference.cache
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.exe.config
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.Form1.resources
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.Properties.Resources.resources
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.GenerateResource.cache
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.CoreCompileInputs.cache
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.CopyComplete
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.exe
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.pdb

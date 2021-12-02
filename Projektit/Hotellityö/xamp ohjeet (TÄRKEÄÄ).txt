@@ -1,0 +1,11 @@
+1. Tee database nimeltä hotelli. Kirjoita nimi hotelli databaseen ja luo se oletusasetuksilla.
+2. Tee taulukko nimeltä hotelliyhteystiedot. Laita hotelliyhteystiedot taulukkoon 5 saraketta. 
+Sarakkeisiin tulee nimiksi(kirjainkoot pitää olla oikeat) ID, Etunimi, Sukunimi, Puhelin, Maa. 
+Kaikki on varchar paitsi ID, joka on int. ID kohtaan tulee pistää auto_increment päälle. Pituudeksi voit
+laittaa jokaiseen minkä tahansa.Ohjelmassa on laitettu jokaiseen pituudeksi 25 ID kohtaa luukuunottamatta, johon ei ole laitettu mitään pituudeksi.
+3. Tee taulukko huoneet. Taulukkkoon huoneet tulee 4 saraketta. 
+Sarakkeisiin tulee nimiksi Huoneennumero, Tyyppi, Puhelin, Vapaa. Jokaisen sarakkeen tyyppi on varchar. 
+Pituus on vapaa valintainen jokaisessa. Pituudeksi laitettu ohjelmassa 25 jokaiseen.
+4. Tee taulukko käyttäjät. Käyttäjät taulukkoon tulee 3 saraketta. Käyttäjä, Salasana, ID. Kaikki on varchar
+paitsi iD, joka on int. ID kohtaan tulee auto_increment päälle. Pituudeksi voit laittaa mitä tahansa. 
+Ohjelmassa on laitettu jokaiseen pituudeksi 25 ID kohtaa luukuunottamatta, johon ei ole laitettu mitään pituudeksi.

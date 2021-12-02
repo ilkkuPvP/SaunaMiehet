@@ -38,10 +38,10 @@ C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stu
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\MySql.Data.xml
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.AssemblyReference.cache
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.exe.config
-C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.Form1.resources
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.Properties.Resources.resources
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.GenerateResource.cache
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.CoreCompileInputs.cache
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.CopyComplete
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.exe
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.pdb
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.KirjauduForm.resources

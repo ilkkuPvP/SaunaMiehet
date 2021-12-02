@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Omaprojekti
 {
-    public partial class Form1 : Form
+    public partial class KirjauduForm : Form
     {
-        public Form1()
+        public KirjauduForm()
         {
             InitializeComponent();
         }
@@ -21,21 +21,27 @@ namespace Omaprojekti
 
         private void RekisteröityminenBT_Click(object sender, EventArgs e)
         {
-            RekisteröidyPanel.Visible = true;
+            RegPanel.Visible = true;
         }
 
-        private void TakaisinPanelBT_Click(object sender, EventArgs e)
+        private void TakaisinRegPanelBT_Click(object sender, EventArgs e)
         {
-            RekisteröidyPanel.Visible = false;
+            RegPanel.Visible = false;
         }
 
-        private void RekisteröidyPanelBT_Click(object sender, EventArgs e)
+        private void RegPanelBT_Click(object sender, EventArgs e)
         {
-            if (KäyttäjäPanelTB.Text != "" || SalasanaPanelTB.Text != "")
+            if (SalasanaRegPanelTB.Text != "" || KäyttäjäRegPanelTB.Text != "")
             {
-                kirjautuminen.kirjautumistiedot(KäyttäjäPanelTB.Text, SalasanaPanelTB.Text);
-                MessageBox.Show("Käyttäjä tehty");
-                RekisteröidyPanel.Visible = false;
+                kirjautuminen.kirjautumistiedot(SalasanaRegPanelTB.Text, KäyttäjäRegPanelTB.Text);
+                MessageBox.Show("Rekisteröityminen onnistui.", "Rekisteröityminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KäyttäjäTB.Text = "";
+                SalasanaTB.Text = "";
+                RegPanel.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Rekisteröityminen epäonnistui: Käyttäjätunnus tai salasana puuttuu.", "Rekisteröityminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         } 
@@ -44,12 +50,27 @@ namespace Omaprojekti
         {
             if (Teko.käyttis(KäyttäjäTB.Text, SalasanaTB.Text) == true)
             {
-                MessageBox.Show("Kirjautuminen onnistui");
+                MessageBox.Show("Kirjautuminen onnistui", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Kirjautuminen epäonnistui");
+                MessageBox.Show("Kirjautuminen epäonnistui: Käyttäjätunnus tai salasana virheellinen.", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void PoistaTunnuksiaPanelBT_Click(object sender, EventArgs e)
+        {
+            PoistaTuPanel.Visible = true;
+        }
+
+        private void TakaisinPoistaTuPanelBT_Click(object sender, EventArgs e)
+        {
+            PoistaTuPanel.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

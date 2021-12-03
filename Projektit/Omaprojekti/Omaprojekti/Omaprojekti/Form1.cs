@@ -16,9 +16,13 @@ namespace Omaprojekti
         {
             InitializeComponent();
         }
+
+        //Hakee juttuja :D
         Kirjautuminen kirjautuminen = new Kirjautuminen();
         Käyttäjäntarkistus Teko = new Käyttäjäntarkistus();
         Tunnuksenpoisto Poistaminen = new Tunnuksenpoisto();
+
+        //Käyttäjien poistoa varten lyhennykset
         string käyttäjä;
         string salasana;
 
@@ -34,7 +38,7 @@ namespace Omaprojekti
 
         private void RegPanelBT_Click(object sender, EventArgs e)
         {
-            if (SalasanaRegPanelTB.Text != "" || KäyttäjäRegPanelTB.Text != "")
+            if (KäyttäjäRegPanelTB.Text != "" || SalasanaRegPanelTB.Text != "")
             {
                 kirjautuminen.kirjautumistiedot(KäyttäjäRegPanelTB.Text, SalasanaRegPanelTB.Text);
                 MessageBox.Show("Rekisteröityminen onnistui.", "Rekisteröityminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -44,20 +48,20 @@ namespace Omaprojekti
             }
             else
             {
-                MessageBox.Show("Rekisteröityminen epäonnistui: Käyttäjätunnus tai salasana puuttuu.", "Rekisteröityminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Rekisteröityminen epäonnistui:\nKäyttäjätunnus tai salasana puuttuu.", "Rekisteröityminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         } 
 
         private void KirjauduBT_Click(object sender, EventArgs e)
         {
-            if (Teko.käyttis(KäyttäjäTB.Text, SalasanaTB.Text) == true)
+            if (Teko.käyttis(KäyttäjäTB.Text, SalasanaTB.Text))
             {
                 MessageBox.Show("Kirjautuminen onnistui", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Kirjautuminen epäonnistui: Käyttäjätunnus tai salasana virheellinen.", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Kirjautuminen epäonnistui:\nKäyttäjätunnus tai salasana virheellinen.", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -69,6 +73,8 @@ namespace Omaprojekti
         private void TakaisinPoistaTuPanelBT_Click(object sender, EventArgs e)
         {
             PoistaTuPanel.Visible = false;
+            KäyttäjäPoistaTuPanelLB.Text = "";
+            SalasanaPoistaTuPanelLB.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -81,16 +87,38 @@ namespace Omaprojekti
             käyttäjä = KäyttäjäPoistaTuPanelLB.Text;
             salasana = SalasanaPoistaTuPanelLB.Text;
 
-            if (Poistaminen.Poisto(käyttäjä, salasana) == true)
+            if (Poistaminen.Poisto(käyttäjä, salasana))
             {
-
                 MessageBox.Show("Poistaminen onnistui", "Poistaminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else
+            } 
+            else
             {
-                MessageBox.Show("Poistaminen epäonnistui", "Poistaminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Poistaminen epäonnistui:\nKäyttäjätunnus tai salasana virheellinen.", "Poistaminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-         
-         
+
+            KäyttäjäPoistaTuPanelLB.Text = "";
+            SalasanaPoistaTuPanelLB.Text = "";
+
+
+
+        }
+
+        private void SalasanaNaytaBT_Click(object sender, EventArgs e)
+        {
+            if(SalasanaNaytaBT.Text == "Näytä")
+            {
+                SalasanaTB.PasswordChar = '\0';
+                SalasanaRegPanelTB.PasswordChar = '\0';
+                SalasanaPoistaTuPanelLB.PasswordChar = '\0';
+                SalasanaNaytaBT.Text = "Piilota";
+            }
+            else if(SalasanaNaytaBT.Text == "Piilota")
+            {
+                SalasanaTB.PasswordChar = '*';
+                SalasanaRegPanelTB.PasswordChar = '*';
+                SalasanaPoistaTuPanelLB.PasswordChar = '*';
+                SalasanaNaytaBT.Text = "Näytä";
+            }
 
         }
     }

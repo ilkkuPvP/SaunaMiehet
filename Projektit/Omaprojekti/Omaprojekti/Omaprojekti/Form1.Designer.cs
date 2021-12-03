@@ -52,6 +52,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.TakaisinPoistaTuPanelBT = new System.Windows.Forms.Button();
+            this.SalasanaNaytaBT = new System.Windows.Forms.Button();
             this.RegPanel.SuspendLayout();
             this.PoistaTuPanel.SuspendLayout();
             this.SuspendLayout();
@@ -78,11 +79,11 @@
             // RekisteröityminenBT
             // 
             this.RekisteröityminenBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RekisteröityminenBT.Location = new System.Drawing.Point(316, 306);
+            this.RekisteröityminenBT.Location = new System.Drawing.Point(309, 306);
             this.RekisteröityminenBT.Name = "RekisteröityminenBT";
-            this.RekisteröityminenBT.Size = new System.Drawing.Size(155, 47);
+            this.RekisteröityminenBT.Size = new System.Drawing.Size(169, 47);
             this.RekisteröityminenBT.TabIndex = 3;
-            this.RekisteröityminenBT.Text = "Rekisteröidy";
+            this.RekisteröityminenBT.Text = "Rekisteröityminen";
             this.RekisteröityminenBT.UseVisualStyleBackColor = true;
             this.RekisteröityminenBT.Click += new System.EventHandler(this.RekisteröityminenBT_Click);
             // 
@@ -209,9 +210,9 @@
             // PoistaTunnuksiaPanelBT
             // 
             this.PoistaTunnuksiaPanelBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoistaTunnuksiaPanelBT.Location = new System.Drawing.Point(309, 359);
+            this.PoistaTunnuksiaPanelBT.Location = new System.Drawing.Point(316, 359);
             this.PoistaTunnuksiaPanelBT.Name = "PoistaTunnuksiaPanelBT";
-            this.PoistaTunnuksiaPanelBT.Size = new System.Drawing.Size(169, 47);
+            this.PoistaTunnuksiaPanelBT.Size = new System.Drawing.Size(156, 47);
             this.PoistaTunnuksiaPanelBT.TabIndex = 23;
             this.PoistaTunnuksiaPanelBT.Text = "Poista tunnuksia";
             this.PoistaTunnuksiaPanelBT.UseVisualStyleBackColor = true;
@@ -300,11 +301,23 @@
             this.TakaisinPoistaTuPanelBT.UseVisualStyleBackColor = true;
             this.TakaisinPoistaTuPanelBT.Click += new System.EventHandler(this.TakaisinPoistaTuPanelBT_Click);
             // 
+            // SalasanaNaytaBT
+            // 
+            this.SalasanaNaytaBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalasanaNaytaBT.Location = new System.Drawing.Point(504, 198);
+            this.SalasanaNaytaBT.Name = "SalasanaNaytaBT";
+            this.SalasanaNaytaBT.Size = new System.Drawing.Size(68, 35);
+            this.SalasanaNaytaBT.TabIndex = 30;
+            this.SalasanaNaytaBT.Text = "Näytä";
+            this.SalasanaNaytaBT.UseVisualStyleBackColor = true;
+            this.SalasanaNaytaBT.Click += new System.EventHandler(this.SalasanaNaytaBT_Click);
+            // 
             // KirjauduForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.SalasanaNaytaBT);
             this.Controls.Add(this.PoistaTuPanel);
             this.Controls.Add(this.RegPanel);
             this.Controls.Add(this.SalasanaTB);
@@ -352,6 +365,7 @@
         private System.Windows.Forms.TextBox KäyttäjäPoistaTuPanelLB;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button SalasanaNaytaBT;
     }
 }
 

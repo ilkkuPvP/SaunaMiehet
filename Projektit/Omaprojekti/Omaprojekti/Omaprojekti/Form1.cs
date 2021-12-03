@@ -17,7 +17,10 @@ namespace Omaprojekti
             InitializeComponent();
         }
         Kirjautuminen kirjautuminen = new Kirjautuminen();
-        Uudenkäyttäjänteko Teko = new Uudenkäyttäjänteko();
+        Käyttäjäntarkistus Teko = new Käyttäjäntarkistus();
+        Tunnuksenpoisto Poistaminen = new Tunnuksenpoisto();
+        string käyttäjä;
+        string salasana;
 
         private void RekisteröityminenBT_Click(object sender, EventArgs e)
         {
@@ -33,7 +36,7 @@ namespace Omaprojekti
         {
             if (SalasanaRegPanelTB.Text != "" || KäyttäjäRegPanelTB.Text != "")
             {
-                kirjautuminen.kirjautumistiedot(SalasanaRegPanelTB.Text, KäyttäjäRegPanelTB.Text);
+                kirjautuminen.kirjautumistiedot(KäyttäjäRegPanelTB.Text, SalasanaRegPanelTB.Text);
                 MessageBox.Show("Rekisteröityminen onnistui.", "Rekisteröityminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 KäyttäjäTB.Text = "";
                 SalasanaTB.Text = "";
@@ -70,6 +73,24 @@ namespace Omaprojekti
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void PoistaTunnusBT_Click(object sender, EventArgs e)
+        {
+            käyttäjä = KäyttäjäPoistaTuPanelLB.Text;
+            salasana = SalasanaPoistaTuPanelLB.Text;
+
+            if (Poistaminen.Poisto(käyttäjä, salasana) == true)
+            {
+
+                MessageBox.Show("Poistaminen onnistui", "Poistaminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } else
+            {
+                MessageBox.Show("Poistaminen epäonnistui", "Poistaminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+         
+         
 
         }
     }

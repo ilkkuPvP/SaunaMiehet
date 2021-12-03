@@ -261,6 +261,7 @@
             this.PoistaTunnusBT.TabIndex = 25;
             this.PoistaTunnusBT.Text = "Poista tunnus";
             this.PoistaTunnusBT.UseVisualStyleBackColor = true;
+            this.PoistaTunnusBT.Click += new System.EventHandler(this.PoistaTunnusBT_Click);
             // 
             // KäyttäjäPoistaTuPanelLB
             // 

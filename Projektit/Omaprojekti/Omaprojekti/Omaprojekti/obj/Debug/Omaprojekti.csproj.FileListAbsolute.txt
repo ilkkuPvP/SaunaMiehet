@@ -2,7 +2,6 @@ C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaproj
 C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\Omaprojekti.exe
 C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\Omaprojekti.pdb
 C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csprojAssemblyReference.cache
-C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.Form1.resources
 C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.Properties.Resources.resources
 C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.GenerateResource.cache
 C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.exe
@@ -45,3 +44,4 @@ C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stu
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.exe
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.pdb
 C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.KirjauduForm.resources
+C:\Users\Samuh\Desktop\Uusi kansio (8)\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.KirjauduForm.resources

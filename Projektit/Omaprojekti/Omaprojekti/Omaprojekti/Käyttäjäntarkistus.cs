@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace Omaprojekti
 {
-    class Uudenkäyttäjänteko
+    class Käyttäjäntarkistus
     {
         YhdistäSQL yhteys = new YhdistäSQL();
         public bool käyttis(string käyttäjä, string Salasana)

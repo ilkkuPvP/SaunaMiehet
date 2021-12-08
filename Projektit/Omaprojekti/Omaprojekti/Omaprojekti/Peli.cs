@@ -156,5 +156,15 @@ namespace Omaprojekti
             totalClicks += 1 * clickKerroin;
             TotalClicksLB.Text = "Total Clicks: " + totalClicks;
         }
+
+        private void Lataatiedot_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TallennaTiedot_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

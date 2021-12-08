@@ -36,21 +36,23 @@ namespace Omaprojekti
             this.TotalClicksLB = new System.Windows.Forms.Label();
             this.KauppaBT = new System.Windows.Forms.Button();
             this.KauppaPanel = new System.Windows.Forms.Panel();
-            this.TakaisinKauppaBT = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.KerroinOstoBT = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.AutoClickerOstoBT = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.AutoClickerOstoBT = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.KerroinOstoBT = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TakaisinKauppaBT = new System.Windows.Forms.Button();
             this.AutoClickerT = new System.Windows.Forms.Timer(this.components);
+            this.LataaTiedot = new System.Windows.Forms.Button();
+            this.TallennaTiedot = new System.Windows.Forms.Button();
             this.KauppaPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,6 +110,8 @@ namespace Omaprojekti
             // 
             // KauppaPanel
             // 
+            this.KauppaPanel.Controls.Add(this.TallennaTiedot);
+            this.KauppaPanel.Controls.Add(this.LataaTiedot);
             this.KauppaPanel.Controls.Add(this.button6);
             this.KauppaPanel.Controls.Add(this.label6);
             this.KauppaPanel.Controls.Add(this.button5);
@@ -129,87 +133,45 @@ namespace Omaprojekti
             this.KauppaPanel.TabIndex = 34;
             this.KauppaPanel.Visible = false;
             // 
-            // TakaisinKauppaBT
+            // button6
             // 
-            this.TakaisinKauppaBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TakaisinKauppaBT.Location = new System.Drawing.Point(13, 378);
-            this.TakaisinKauppaBT.Name = "TakaisinKauppaBT";
-            this.TakaisinKauppaBT.Size = new System.Drawing.Size(117, 60);
-            this.TakaisinKauppaBT.TabIndex = 31;
-            this.TakaisinKauppaBT.Text = "Takaisin";
-            this.TakaisinKauppaBT.UseVisualStyleBackColor = true;
-            this.TakaisinKauppaBT.Click += new System.EventHandler(this.TakaisinKauppaBT_Click);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(481, 226);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(123, 41);
+            this.button6.TabIndex = 43;
+            this.button6.Text = "Takaisin";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // label6
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(776, 42);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Kauppa";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(418, 236);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 23);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Kerroin:";
             // 
-            // button1
+            // button5
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(218, 173);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 41);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Takaisin";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(481, 173);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(123, 41);
+            this.button5.TabIndex = 41;
+            this.button5.Text = "Takaisin";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // label5
             // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(155, 128);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 23);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Kerroin:";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(155, 183);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 23);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Kerroin:";
-            // 
-            // KerroinOstoBT
-            // 
-            this.KerroinOstoBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KerroinOstoBT.Location = new System.Drawing.Point(218, 118);
-            this.KerroinOstoBT.Name = "KerroinOstoBT";
-            this.KerroinOstoBT.Size = new System.Drawing.Size(123, 41);
-            this.KerroinOstoBT.TabIndex = 36;
-            this.KerroinOstoBT.Text = "MULTx (Hinta)";
-            this.KerroinOstoBT.UseVisualStyleBackColor = true;
-            this.KerroinOstoBT.Click += new System.EventHandler(this.KerroinOstoBT_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(218, 226);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 41);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "Takaisin";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(155, 236);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 23);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Kerroin:";
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(418, 183);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 23);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Kerroin:";
             // 
             // AutoClickerOstoBT
             // 
@@ -232,50 +194,114 @@ namespace Omaprojekti
             this.label4.TabIndex = 40;
             this.label4.Text = "Kerroin:";
             // 
-            // button5
+            // button3
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(481, 173);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 41);
-            this.button5.TabIndex = 41;
-            this.button5.Text = "Takaisin";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(218, 226);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(123, 41);
+            this.button3.TabIndex = 37;
+            this.button3.Text = "Takaisin";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // label3
             // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(418, 183);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 23);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Kerroin:";
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(155, 236);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 23);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Kerroin:";
             // 
-            // button6
+            // KerroinOstoBT
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(481, 226);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 41);
-            this.button6.TabIndex = 43;
-            this.button6.Text = "Takaisin";
-            this.button6.UseVisualStyleBackColor = true;
+            this.KerroinOstoBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KerroinOstoBT.Location = new System.Drawing.Point(218, 118);
+            this.KerroinOstoBT.Name = "KerroinOstoBT";
+            this.KerroinOstoBT.Size = new System.Drawing.Size(123, 41);
+            this.KerroinOstoBT.TabIndex = 36;
+            this.KerroinOstoBT.Text = "MULTx (Hinta)";
+            this.KerroinOstoBT.UseVisualStyleBackColor = true;
+            this.KerroinOstoBT.Click += new System.EventHandler(this.KerroinOstoBT_Click);
             // 
-            // label6
+            // button1
             // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(418, 236);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 23);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Kerroin:";
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(218, 173);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 41);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Takaisin";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(155, 183);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 23);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Kerroin:";
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(155, 128);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 23);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Kerroin:";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(776, 42);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Kauppa";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // TakaisinKauppaBT
+            // 
+            this.TakaisinKauppaBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TakaisinKauppaBT.Location = new System.Drawing.Point(13, 378);
+            this.TakaisinKauppaBT.Name = "TakaisinKauppaBT";
+            this.TakaisinKauppaBT.Size = new System.Drawing.Size(117, 60);
+            this.TakaisinKauppaBT.TabIndex = 31;
+            this.TakaisinKauppaBT.Text = "Takaisin";
+            this.TakaisinKauppaBT.UseVisualStyleBackColor = true;
+            this.TakaisinKauppaBT.Click += new System.EventHandler(this.TakaisinKauppaBT_Click);
             // 
             // AutoClickerT
             // 
             this.AutoClickerT.Interval = 5000;
             this.AutoClickerT.Tick += new System.EventHandler(this.AutoClickerT_Tick);
+            // 
+            // LataaTiedot
+            // 
+            this.LataaTiedot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.LataaTiedot.Location = new System.Drawing.Point(501, 388);
+            this.LataaTiedot.Name = "LataaTiedot";
+            this.LataaTiedot.Size = new System.Drawing.Size(180, 50);
+            this.LataaTiedot.TabIndex = 45;
+            this.LataaTiedot.Text = "Lataa edellisen tallennuksen tiedot";
+            this.LataaTiedot.UseVisualStyleBackColor = true;
+            this.LataaTiedot.Click += new System.EventHandler(this.Lataatiedot_Click);
+            // 
+            // TallennaTiedot
+            // 
+            this.TallennaTiedot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.TallennaTiedot.Location = new System.Drawing.Point(300, 388);
+            this.TallennaTiedot.Name = "TallennaTiedot";
+            this.TallennaTiedot.Size = new System.Drawing.Size(126, 50);
+            this.TallennaTiedot.TabIndex = 46;
+            this.TallennaTiedot.Text = "Tallenna tiedot";
+            this.TallennaTiedot.UseVisualStyleBackColor = true;
+            this.TallennaTiedot.Click += new System.EventHandler(this.TallennaTiedot_Click);
             // 
             // Peli
             // 
@@ -320,5 +346,7 @@ namespace Omaprojekti
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer AutoClickerT;
+        private System.Windows.Forms.Button LataaTiedot;
+        private System.Windows.Forms.Button TallennaTiedot;
     }
 }

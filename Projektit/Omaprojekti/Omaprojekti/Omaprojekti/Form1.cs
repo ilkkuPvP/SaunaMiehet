@@ -58,6 +58,9 @@ namespace Omaprojekti
             if (Teko.käyttis(KäyttäjäTB.Text, SalasanaTB.Text))
             {
                 MessageBox.Show("Kirjautuminen onnistui", "Kirjautuminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                Peli f1 = new Peli();
+                f1.Show();
             }
             else
             {
@@ -120,6 +123,12 @@ namespace Omaprojekti
                 SalasanaNaytaBT.Text = "Näytä";
             }
 
+        }
+
+        private void KirjauduForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Peli f1 = new Peli();
+            f1.Close();
         }
     }
 }

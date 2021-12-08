@@ -330,6 +330,7 @@
             this.Controls.Add(this.PoistaTunnuksiaPanelBT);
             this.Name = "KirjauduForm";
             this.Text = "Kirjaudu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KirjauduForm_FormClosing);
             this.RegPanel.ResumeLayout(false);
             this.RegPanel.PerformLayout();
             this.PoistaTuPanel.ResumeLayout(false);

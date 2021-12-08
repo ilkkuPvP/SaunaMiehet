@@ -51,8 +51,8 @@ namespace Omaprojekti
             this.label1 = new System.Windows.Forms.Label();
             this.TakaisinKauppaBT = new System.Windows.Forms.Button();
             this.AutoClickerT = new System.Windows.Forms.Timer(this.components);
-            this.LataaTiedot = new System.Windows.Forms.Button();
-            this.TallennaTiedot = new System.Windows.Forms.Button();
+            this.TallennaTiedotBT = new System.Windows.Forms.Button();
+            this.LataaTiedotBT = new System.Windows.Forms.Button();
             this.KauppaPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,8 +110,6 @@ namespace Omaprojekti
             // 
             // KauppaPanel
             // 
-            this.KauppaPanel.Controls.Add(this.TallennaTiedot);
-            this.KauppaPanel.Controls.Add(this.LataaTiedot);
             this.KauppaPanel.Controls.Add(this.button6);
             this.KauppaPanel.Controls.Add(this.label6);
             this.KauppaPanel.Controls.Add(this.button5);
@@ -281,27 +279,27 @@ namespace Omaprojekti
             this.AutoClickerT.Interval = 5000;
             this.AutoClickerT.Tick += new System.EventHandler(this.AutoClickerT_Tick);
             // 
-            // LataaTiedot
+            // TallennaTiedotBT
             // 
-            this.LataaTiedot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.LataaTiedot.Location = new System.Drawing.Point(501, 388);
-            this.LataaTiedot.Name = "LataaTiedot";
-            this.LataaTiedot.Size = new System.Drawing.Size(180, 50);
-            this.LataaTiedot.TabIndex = 45;
-            this.LataaTiedot.Text = "Lataa edellisen tallennuksen tiedot";
-            this.LataaTiedot.UseVisualStyleBackColor = true;
-            this.LataaTiedot.Click += new System.EventHandler(this.Lataatiedot_Click);
+            this.TallennaTiedotBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.TallennaTiedotBT.Location = new System.Drawing.Point(485, 378);
+            this.TallennaTiedotBT.Name = "TallennaTiedotBT";
+            this.TallennaTiedotBT.Size = new System.Drawing.Size(117, 60);
+            this.TallennaTiedotBT.TabIndex = 48;
+            this.TallennaTiedotBT.Text = "Tallenna tiedot";
+            this.TallennaTiedotBT.UseVisualStyleBackColor = true;
+            this.TallennaTiedotBT.Click += new System.EventHandler(this.TallennaTiedotBT_Click);
             // 
-            // TallennaTiedot
+            // LataaTiedotBT
             // 
-            this.TallennaTiedot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TallennaTiedot.Location = new System.Drawing.Point(300, 388);
-            this.TallennaTiedot.Name = "TallennaTiedot";
-            this.TallennaTiedot.Size = new System.Drawing.Size(126, 50);
-            this.TallennaTiedot.TabIndex = 46;
-            this.TallennaTiedot.Text = "Tallenna tiedot";
-            this.TallennaTiedot.UseVisualStyleBackColor = true;
-            this.TallennaTiedot.Click += new System.EventHandler(this.TallennaTiedot_Click);
+            this.LataaTiedotBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.LataaTiedotBT.Location = new System.Drawing.Point(608, 378);
+            this.LataaTiedotBT.Name = "LataaTiedotBT";
+            this.LataaTiedotBT.Size = new System.Drawing.Size(180, 60);
+            this.LataaTiedotBT.TabIndex = 47;
+            this.LataaTiedotBT.Text = "Lataa edellisen tallennuksen tiedot";
+            this.LataaTiedotBT.UseVisualStyleBackColor = true;
+            this.LataaTiedotBT.Click += new System.EventHandler(this.LataaTiedotBT_Click);
             // 
             // Peli
             // 
@@ -314,6 +312,8 @@ namespace Omaprojekti
             this.Controls.Add(this.ClickBT);
             this.Controls.Add(this.TakaisinPeliBT);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.TallennaTiedotBT);
+            this.Controls.Add(this.LataaTiedotBT);
             this.Name = "Peli";
             this.Text = "Peli";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Peli_FormClosed);
@@ -346,7 +346,7 @@ namespace Omaprojekti
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer AutoClickerT;
-        private System.Windows.Forms.Button LataaTiedot;
-        private System.Windows.Forms.Button TallennaTiedot;
+        private System.Windows.Forms.Button TallennaTiedotBT;
+        private System.Windows.Forms.Button LataaTiedotBT;
     }
 }

@@ -14,7 +14,7 @@ namespace Omaprojekti
     {
         public int totalClicks = 0;
 
-        // TÄÄ YLI KIRJOTTAA OSTEETUN JUTUUN OHOHOHOHO
+        // TÄÄ RESETTAA ALUSSA JOTEN TARVII NAPIN JOKA LATAA VANHAN TALLENNUKSEN //
         public int clickKerroin = 1; // RESETTII
         public int clickKerroinHinta = 5; // joku 25-50 hyvä alkuhinta
         public int clickKerroinMaara = 0; // RESETTII TAAS
@@ -22,6 +22,8 @@ namespace Omaprojekti
         public int autoClickerNopeus = 5; // RESETTI
         public int autoClickerHinta = 10; //
 
+
+        //--------------------------------------------------//
         public Peli()
         {
             InitializeComponent();
@@ -55,15 +57,16 @@ namespace Omaprojekti
         {
             KauppaPanel.Visible = false;
         }
+        //--------------------------------------------------//
 
-        // *CLICK*
+        // *CLICK* //
         private void ClickBT_Click(object sender, EventArgs e)
         {
             totalClicks += 1 * clickKerroin;
             TotalClicksLB.Text = "Total Clicks: " + totalClicks;
         }
 
-        // KERROIN
+        // KERROIN //
         private void KerroinOstoBT_Click(object sender, EventArgs e)
         {
             if(clickKerroinMaara == 0 && totalClicks >= clickKerroinHinta)
@@ -77,7 +80,7 @@ namespace Omaprojekti
             }
         }
 
-        // AUTO CLICKER
+        // AUTO CLICKER //
         private void AutoClickerOstoBT_Click(object sender, EventArgs e)
         {
             int ostoKerta = 0;
@@ -150,19 +153,21 @@ namespace Omaprojekti
 
         }
 
-        // AUTO CLICKER AJASTIN
+        // AUTO CLICKER AJASTIN //
         private void AutoClickerT_Tick(object sender, EventArgs e)
         {
             totalClicks += 1 * clickKerroin;
             TotalClicksLB.Text = "Total Clicks: " + totalClicks;
         }
 
-        private void Lataatiedot_Click(object sender, EventArgs e)
+        // LATAA KÄYTTÄJÄN PELIN TALLENNUKSEN //
+        private void LataaTiedotBT_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void TallennaTiedot_Click(object sender, EventArgs e)
+        // TALLENTAA NYKYISEN PELIN TILAN KÄYTTÄJÄLLE //
+        private void TallennaTiedotBT_Click(object sender, EventArgs e)
         {
             
         }

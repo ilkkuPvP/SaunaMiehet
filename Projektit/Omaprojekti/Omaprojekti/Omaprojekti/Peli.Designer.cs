@@ -42,7 +42,7 @@ namespace Omaprojekti
             this.label5 = new System.Windows.Forms.Label();
             this.AutoClickerOstoBT = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.KissaOstoBT = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.KerroinOstoBT = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -53,6 +53,7 @@ namespace Omaprojekti
             this.AutoClickerT = new System.Windows.Forms.Timer(this.components);
             this.TallennaTiedotBT = new System.Windows.Forms.Button();
             this.LataaTiedotBT = new System.Windows.Forms.Button();
+            this.KissaClicksLB = new System.Windows.Forms.Label();
             this.KauppaPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,7 +117,7 @@ namespace Omaprojekti
             this.KauppaPanel.Controls.Add(this.label5);
             this.KauppaPanel.Controls.Add(this.AutoClickerOstoBT);
             this.KauppaPanel.Controls.Add(this.label4);
-            this.KauppaPanel.Controls.Add(this.button3);
+            this.KauppaPanel.Controls.Add(this.KissaOstoBT);
             this.KauppaPanel.Controls.Add(this.label3);
             this.KauppaPanel.Controls.Add(this.KerroinOstoBT);
             this.KauppaPanel.Controls.Add(this.button1);
@@ -192,15 +193,16 @@ namespace Omaprojekti
             this.label4.TabIndex = 40;
             this.label4.Text = "Kerroin:";
             // 
-            // button3
+            // KissaOstoBT
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(218, 226);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 41);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "Takaisin";
-            this.button3.UseVisualStyleBackColor = true;
+            this.KissaOstoBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KissaOstoBT.Location = new System.Drawing.Point(218, 226);
+            this.KissaOstoBT.Name = "KissaOstoBT";
+            this.KissaOstoBT.Size = new System.Drawing.Size(123, 41);
+            this.KissaOstoBT.TabIndex = 37;
+            this.KissaOstoBT.Text = "Kissa (Hinta)";
+            this.KissaOstoBT.UseVisualStyleBackColor = true;
+            this.KissaOstoBT.Click += new System.EventHandler(this.KissaOstoBT_Click);
             // 
             // label3
             // 
@@ -301,11 +303,22 @@ namespace Omaprojekti
             this.LataaTiedotBT.UseVisualStyleBackColor = true;
             this.LataaTiedotBT.Click += new System.EventHandler(this.LataaTiedotBT_Click);
             // 
+            // KissaClicksLB
+            // 
+            this.KissaClicksLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KissaClicksLB.Location = new System.Drawing.Point(12, 32);
+            this.KissaClicksLB.Name = "KissaClicksLB";
+            this.KissaClicksLB.Size = new System.Drawing.Size(262, 23);
+            this.KissaClicksLB.TabIndex = 49;
+            this.KissaClicksLB.Text = "Kissat:";
+            this.KissaClicksLB.Visible = false;
+            // 
             // Peli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.KissaClicksLB);
             this.Controls.Add(this.TotalClicksLB);
             this.Controls.Add(this.KauppaPanel);
             this.Controls.Add(this.KauppaBT);
@@ -343,10 +356,11 @@ namespace Omaprojekti
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button AutoClickerOstoBT;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button KissaOstoBT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer AutoClickerT;
         private System.Windows.Forms.Button TallennaTiedotBT;
         private System.Windows.Forms.Button LataaTiedotBT;
+        private System.Windows.Forms.Label KissaClicksLB;
     }
 }

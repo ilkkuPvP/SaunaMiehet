@@ -13,6 +13,7 @@ namespace Omaprojekti
     public partial class Peli : Form
     {
         public int totalClicks = 0;
+        public int Kissat = 0;
 
         // TÄÄ RESETTAA ALUSSA JOTEN TARVII NAPIN JOKA LATAA VANHAN TALLENNUKSEN //
         public int clickKerroin = 1; // RESETTII
@@ -21,6 +22,8 @@ namespace Omaprojekti
 
         public int autoClickerNopeus = 5; // RESETTI
         public int autoClickerHinta = 10; //
+
+        public int KissaHinta = 10; // hinta kannattaa pitää suunnilleen 1000
 
 
         //--------------------------------------------------//
@@ -64,6 +67,12 @@ namespace Omaprojekti
         {
             totalClicks += 1 * clickKerroin;
             TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+
+            if (KissaClicksLB.Visible == true)
+            {
+                Kissat += 1;
+                KissaClicksLB.Text = "Kissat: " + Kissat;
+            }
         }
 
         // KERROIN //
@@ -170,6 +179,19 @@ namespace Omaprojekti
         private void TallennaTiedotBT_Click(object sender, EventArgs e)
         {
             
+        }
+
+        // KISSA KERROIN //
+        private void KissaOstoBT_Click(object sender, EventArgs e)
+        {
+            int KissaOstoKerta = 0;
+
+            if (totalClicks >= KissaHinta && KissaOstoKerta == 0)
+            {
+                KissaOstoBT.Text = "Ostettu";
+                KissaClicksLB.Visible = true;
+                KissaOstoKerta += 1;
+            }
         }
     }
 }

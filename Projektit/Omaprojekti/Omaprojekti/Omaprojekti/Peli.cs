@@ -12,8 +12,11 @@ namespace Omaprojekti
 {
     public partial class Peli : Form
     {
+        public int kissaOstoKerta = 0;
+        public int autoOstoKerta = 0;
+
         public int totalClicks = 0;
-        public int Kissat = 0;
+        public int kissat = 0;
 
         // TÄÄ RESETTAA ALUSSA JOTEN TARVII NAPIN JOKA LATAA VANHAN TALLENNUKSEN //
         public int clickKerroin = 1; // RESETTII
@@ -23,8 +26,11 @@ namespace Omaprojekti
         public int autoClickerNopeus = 5; // RESETTI
         public int autoClickerHinta = 10; //
 
-        public int KissaHinta = 10; // hinta kannattaa pitää suunnilleen 1000
+        public int kissaHinta = 1000; // hinta kannattaa pitää suunnilleen 1000
 
+        public int clickKerroin2 = 0;
+        public int clickKerroin2Hinta = 10;
+        public int clickKerroin2Maara = 0;
 
         //--------------------------------------------------//
         public Peli()
@@ -54,6 +60,26 @@ namespace Omaprojekti
         private void KauppaBT_Click(object sender, EventArgs e)
         {
             KauppaPanel.Visible = true;
+
+            KerroinOsto2BT.Text = "MUL4x (" + clickKerroin2Hinta + "k)";
+            KerroinOstoBT.Text = "MUL2x (" + clickKerroinHinta + "c)";
+
+            if(autoOstoKerta >= 5)
+            {
+                AutoClickerOstoBT.Text = "Ostettu";
+            }
+            else
+            {
+                AutoClickerOstoBT.Text = "sek (" + autoClickerHinta + "c)";
+            }
+            if (kissaOstoKerta >= 1)
+            {
+                KissaOstoBT.Text = "Ostettu";
+            }
+            else
+            {
+                KissaOstoBT.Text = "Kissa (" + kissaHinta + "c)";
+            }
         }
 
         private void TakaisinKauppaBT_Click(object sender, EventArgs e)
@@ -66,19 +92,22 @@ namespace Omaprojekti
         private void ClickBT_Click(object sender, EventArgs e)
         {
             totalClicks += 1 * clickKerroin;
+            totalClicks += 1 * clickKerroin2;
             TotalClicksLB.Text = "Total Clicks: " + totalClicks;
 
             if (KissaClicksLB.Visible == true)
             {
-                Kissat += 1;
-                KissaClicksLB.Text = "Kissat: " + Kissat;
+                kissat += 1;
+                KissaClicksLB.Text = "Kissat: " + kissat;
             }
         }
 
         // KERROIN //
         private void KerroinOstoBT_Click(object sender, EventArgs e)
         {
-            if(clickKerroinMaara == 0 && totalClicks >= clickKerroinHinta)
+           KerroinOstoBT.Text = "MUL2x (" + clickKerroinHinta + "c)"; 
+
+            if (clickKerroinMaara == 0 && totalClicks >= clickKerroinHinta)
             {
 
                 totalClicks -= clickKerroinHinta;
@@ -86,16 +115,15 @@ namespace Omaprojekti
 
                 clickKerroin += 1;
                 clickKerroinHinta *= 2;
+                KerroinOstoBT.Text = "MUL2x (" + clickKerroinHinta + "c)";
             }
         }
 
         // AUTO CLICKER //
         private void AutoClickerOstoBT_Click(object sender, EventArgs e)
         {
-            int ostoKerta = 0;
             
-
-            if (ostoKerta == 0 && totalClicks >= autoClickerHinta)
+            if (autoOstoKerta == 0 && totalClicks >= autoClickerHinta)
             {
                 totalClicks -= autoClickerHinta;
                 TotalClicksLB.Text = "Total Clicks: " + totalClicks;
@@ -104,11 +132,11 @@ namespace Omaprojekti
                 autoClickerHinta *= 2;
                 AutoClickerT.Interval = autoClickerNopeus * 1000;
                 AutoClickerT.Enabled = true;
-
-                ostoKerta += 1;
+                AutoClickerOstoBT.Text = "sek (" + autoClickerHinta + "c)";
+                autoOstoKerta += 1;
             }
 
-            if (ostoKerta == 1 && totalClicks >= autoClickerHinta)
+            if (autoOstoKerta == 1 && totalClicks >= autoClickerHinta)
             {
                 totalClicks -= autoClickerHinta;
                 TotalClicksLB.Text = "Total Clicks: " + totalClicks;
@@ -117,11 +145,11 @@ namespace Omaprojekti
                 autoClickerHinta *= 2;
                 AutoClickerT.Interval = autoClickerNopeus * 1000;
                 AutoClickerT.Enabled = true;
-
-                ostoKerta += 1;
+                AutoClickerOstoBT.Text = "sek (" + autoClickerHinta + "c)";
+                autoOstoKerta += 1;
             }
 
-            if (ostoKerta == 2 && totalClicks >= autoClickerHinta)
+            if (autoOstoKerta == 2 && totalClicks >= autoClickerHinta)
             {
                 totalClicks -= autoClickerHinta;
                 TotalClicksLB.Text = "Total Clicks: " + totalClicks;
@@ -130,11 +158,11 @@ namespace Omaprojekti
                 autoClickerHinta *= 2;
                 AutoClickerT.Interval = autoClickerNopeus * 1000;
                 AutoClickerT.Enabled = true;
-
-                ostoKerta += 1;
+                AutoClickerOstoBT.Text = "sek (" + autoClickerHinta + "c)";
+                autoOstoKerta += 1;
             }
 
-            if (ostoKerta == 3 && totalClicks >= autoClickerHinta)
+            if (autoOstoKerta == 3 && totalClicks >= autoClickerHinta)
             {
                 totalClicks -= autoClickerHinta;
                 TotalClicksLB.Text = "Total Clicks: " + totalClicks;
@@ -143,11 +171,11 @@ namespace Omaprojekti
                 autoClickerHinta *= 2;
                 AutoClickerT.Interval = autoClickerNopeus * 1000;
                 AutoClickerT.Enabled = true;
-
-                ostoKerta += 1;
+                AutoClickerOstoBT.Text = "sek (" + autoClickerHinta + "c)";
+                autoOstoKerta += 1;
             }
 
-            if (ostoKerta == 4 && totalClicks >= autoClickerHinta)
+            if (autoOstoKerta == 4 && totalClicks >= autoClickerHinta)
             {
                 totalClicks -= autoClickerHinta;
                 TotalClicksLB.Text = "Total Clicks: " + totalClicks;
@@ -156,8 +184,8 @@ namespace Omaprojekti
                 autoClickerHinta *= 2;
                 AutoClickerT.Interval = autoClickerNopeus * 1000;
                 AutoClickerT.Enabled = true;
-
-                ostoKerta += 1;
+                AutoClickerOstoBT.Text = "Ostettu";
+                autoOstoKerta += 1;
             }
 
         }
@@ -166,6 +194,7 @@ namespace Omaprojekti
         private void AutoClickerT_Tick(object sender, EventArgs e)
         {
             totalClicks += 1 * clickKerroin;
+            totalClicks += 1 * clickKerroin2;
             TotalClicksLB.Text = "Total Clicks: " + totalClicks;
         }
 
@@ -184,13 +213,32 @@ namespace Omaprojekti
         // KISSA KERROIN //
         private void KissaOstoBT_Click(object sender, EventArgs e)
         {
-            int KissaOstoKerta = 0;
-
-            if (totalClicks >= KissaHinta && KissaOstoKerta == 0)
+          
+            if (totalClicks >= kissaHinta && kissaOstoKerta == 0)
             {
+                totalClicks -= kissaHinta;
+                TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+                KissaClicksLB.Text = "Kissat: " + kissat;
                 KissaOstoBT.Text = "Ostettu";
                 KissaClicksLB.Visible = true;
-                KissaOstoKerta += 1;
+                kissaOstoKerta += 1;
+            }
+        }
+
+        // TOINEN KERROIN //
+        private void KerroinOsto2BT_Click(object sender, EventArgs e)
+        {
+          KerroinOsto2BT.Text = "MUL4x (" + clickKerroin2Hinta + "k)";
+
+            if (clickKerroin2Maara == 0 && kissat >= clickKerroin2Hinta)
+            {
+                kissat -= clickKerroin2Hinta;
+                KissaClicksLB.Text = "Kissat: " + kissat;
+                TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+
+                clickKerroin2 += 2;
+                clickKerroin2Hinta *= 3;
+                KerroinOsto2BT.Text = "MUL4x (" + clickKerroin2Hinta + "k)";
             }
         }
     }

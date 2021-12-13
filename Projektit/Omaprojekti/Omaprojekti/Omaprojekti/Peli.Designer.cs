@@ -36,7 +36,7 @@ namespace Omaprojekti
             this.TotalClicksLB = new System.Windows.Forms.Label();
             this.KauppaBT = new System.Windows.Forms.Button();
             this.KauppaPanel = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.KerroinOsto2BT = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -111,7 +111,7 @@ namespace Omaprojekti
             // 
             // KauppaPanel
             // 
-            this.KauppaPanel.Controls.Add(this.button6);
+            this.KauppaPanel.Controls.Add(this.KerroinOsto2BT);
             this.KauppaPanel.Controls.Add(this.label6);
             this.KauppaPanel.Controls.Add(this.button5);
             this.KauppaPanel.Controls.Add(this.label5);
@@ -132,15 +132,16 @@ namespace Omaprojekti
             this.KauppaPanel.TabIndex = 34;
             this.KauppaPanel.Visible = false;
             // 
-            // button6
+            // KerroinOsto2BT
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(481, 226);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 41);
-            this.button6.TabIndex = 43;
-            this.button6.Text = "Takaisin";
-            this.button6.UseVisualStyleBackColor = true;
+            this.KerroinOsto2BT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KerroinOsto2BT.Location = new System.Drawing.Point(481, 226);
+            this.KerroinOsto2BT.Name = "KerroinOsto2BT";
+            this.KerroinOsto2BT.Size = new System.Drawing.Size(123, 41);
+            this.KerroinOsto2BT.TabIndex = 43;
+            this.KerroinOsto2BT.Text = "MUL4x (Hinta)";
+            this.KerroinOsto2BT.UseVisualStyleBackColor = true;
+            this.KerroinOsto2BT.Click += new System.EventHandler(this.KerroinOsto2BT_Click);
             // 
             // label6
             // 
@@ -221,7 +222,7 @@ namespace Omaprojekti
             this.KerroinOstoBT.Name = "KerroinOstoBT";
             this.KerroinOstoBT.Size = new System.Drawing.Size(123, 41);
             this.KerroinOstoBT.TabIndex = 36;
-            this.KerroinOstoBT.Text = "MULTx (Hinta)";
+            this.KerroinOstoBT.Text = "MUL2x (Hinta)";
             this.KerroinOstoBT.UseVisualStyleBackColor = true;
             this.KerroinOstoBT.Click += new System.EventHandler(this.KerroinOstoBT_Click);
             // 
@@ -350,7 +351,7 @@ namespace Omaprojekti
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button KerroinOstoBT;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button KerroinOsto2BT;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label5;

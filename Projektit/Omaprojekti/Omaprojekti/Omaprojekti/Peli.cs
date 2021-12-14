@@ -299,12 +299,12 @@ namespace Omaprojekti
                         int uus = int.Parse(numeroidentulostus);
                         var hakeminen = new Peli();
                         totalClicks += uus;
-                        MessageBox.Show("Käyttäjä ladattu onnistuneesti", "Lataaminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Tiedot ladattu onnistuneesti", "Tietojen lataaminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         TotalClicksLB.Text = "Total Clicks: " + totalClicks;
                     }
                     else
                     {
-                        MessageBox.Show("Käyttäjää ei ole olemassa", "Lataaminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Tietoja ei ole olemassa", "Tietojen lataaminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                 }
@@ -316,7 +316,7 @@ namespace Omaprojekti
         {
             string totalclicks = TotalClicksLB.Text.ToString();
             tallennus.TunnustenTallennus(totalclicks);
-            MessageBox.Show("Käyttäjä tallennettu onnistuneesti", "Tallentaminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Tiedot tallennettu onnistuneesti", "Tietojen tallentaminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 

@@ -54,6 +54,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Kirjautuminen.cs" />
+    <Compile Include="Käyttäjäntallennus.cs" />
     <Compile Include="Peli.cs">
       <SubType>Form</SubType>
     </Compile>

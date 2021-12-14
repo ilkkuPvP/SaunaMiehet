@@ -8,15 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using MySql.Data.MySqlClient;
 
 namespace Omaprojekti
 {
     public partial class Peli : Form
     {
+        public string taulukonarvo;
+
+        string numeroidentulostus = string.Empty;
+
+        Käyttäjäntallennus tallennus = new Käyttäjäntallennus();
+        YhdistäSQL yhdistäminen = new YhdistäSQL();
         double autoAikaNyt = 0;
 
         public int kissaOstoKerta = 0;
         public int autoOstoKerta = 0;
+
 
         public int totalClicks = 0;
         public int clicks = 0;
@@ -41,6 +49,7 @@ namespace Omaprojekti
         {
             InitializeComponent();
         }
+
 
         private void Peli_Load(object sender, EventArgs e)
         {
@@ -247,13 +256,68 @@ namespace Omaprojekti
         // LATAA KÄYTTÄJÄN PELIN TALLENNUKSEN //
         private void LataaTiedotBT_Click(object sender, EventArgs e)
         {
+            taulukonarvo = "";
+              totalClicks = 0;
 
+        numeroidentulostus = string.Empty;
+        TunnustenLataaminen();
+
+            void TunnustenLataaminen()
+            {
+
+                MySqlCommand cmd = new MySqlCommand("select Totalclicks from pelintallennus ", yhdistäminen.otaYhteys());
+
+
+
+
+
+
+                yhdistäminen.avaaYhteys();
+
+                using (var reader = cmd.ExecuteReader())
+                {
+
+                    if (reader.Read())
+                    {
+                        taulukonarvo = reader.GetString(reader.GetOrdinal("Totalclicks"));
+                  
+
+
+
+
+                        string a = taulukonarvo;
+
+
+
+                        for (int i = 0; i < a.Length; i++)
+                        {
+                            if (Char.IsDigit(a[i]))
+                                numeroidentulostus += a[i];
+                        }
+
+                        yhdistäminen.suljeYhteys();
+                        int uus = int.Parse(numeroidentulostus);
+                        var hakeminen = new Peli();
+                        totalClicks += uus;
+                        MessageBox.Show("Käyttäjä ladattu onnistuneesti", "Lataaminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Käyttäjää ei ole olemassa", "Lataaminen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+            }
         }
 
         // TALLENTAA NYKYISEN PELIN TILAN KÄYTTÄJÄLLE //
         private void TallennaTiedotBT_Click(object sender, EventArgs e)
         {
-            
+            string totalclicks = TotalClicksLB.Text.ToString();
+            tallennus.TunnustenTallennus(totalclicks);
+            MessageBox.Show("Käyttäjä tallennettu onnistuneesti", "Tallentaminen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         // KISSOJEN OSTO //

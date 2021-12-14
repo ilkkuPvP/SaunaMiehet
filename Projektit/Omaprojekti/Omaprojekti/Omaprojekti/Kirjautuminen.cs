@@ -11,6 +11,7 @@ namespace Omaprojekti
 
     class Kirjautuminen
     {
+        // 
         YhdistäSQL yhdistäminen = new YhdistäSQL();
 
         public bool kirjautumistiedot(string käyttäjätunnus, string salasana)

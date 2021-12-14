@@ -94,3 +94,4 @@ C:\Users\Oliver\source\repot\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omapr
 C:\Users\Oliver\source\repot\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.csproj.CopyComplete
 C:\Users\Oliver\source\repot\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.exe
 C:\Users\Oliver\source\repot\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\obj\Debug\Omaprojekti.pdb
+C:\Users\IlkkuPvP\Desktop\Koulu ja Partio\Amis\Ohjelmointi\JavaScript\GitHub Stuff\SaunaMiehet\Projektit\Omaprojekti\Omaprojekti\Omaprojekti\bin\Debug\Resources\Floppy Disk PXArt (bigger).png

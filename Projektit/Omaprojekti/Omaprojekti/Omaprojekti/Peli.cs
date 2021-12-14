@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
 
 namespace Omaprojekti
 {
     public partial class Peli : Form
     {
+        double autoAikaNyt = 0;
+
         public int kissaOstoKerta = 0;
         public int autoOstoKerta = 0;
 
         public int totalClicks = 0;
+        public int clicks = 0;
         public int kissat = 0;
 
         // TÄÄ RESETTAA ALUSSA JOTEN TARVII NAPIN JOKA LATAA VANHAN TALLENNUKSEN //
@@ -40,29 +44,36 @@ namespace Omaprojekti
 
         private void Peli_Load(object sender, EventArgs e)
         {
+            ClicksLB.Text = "Clicks (c): " + clicks + "c";
             TotalClicksLB.Text = "Total Clicks: " + totalClicks;
         }
 
         private void TakaisinPeliBT_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            KirjauduForm f1 = new KirjauduForm();
-            f1.Show();
+            if(MessageBox.Show("Haluatko varmasti poistua?\nTämä nollaa nykyisen tallennuksesi.", "Poistuminen", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                KirjauduForm f1 = new KirjauduForm();
+                f1.Show();
+            }
+            else
+            {
+
+            }
             
         }
 
         private void Peli_FormClosed(object sender, FormClosedEventArgs e)
         {
-            KirjauduForm f1 = (KirjauduForm)Application.OpenForms["KirjauduForm"];
-            f1.Close();
+            Application.Exit();
         }
 
         private void KauppaBT_Click(object sender, EventArgs e)
         {
             KauppaPanel.Visible = true;
 
-            KerroinOsto2BT.Text = "MUL4x (" + clickKerroin2Hinta + "k)";
-            KerroinOstoBT.Text = "MUL2x (" + clickKerroinHinta + "c)";
+            KerroinOsto2BT.Text = "+2x (" + clickKerroin2Hinta + "k)";
+            KerroinOstoBT.Text = "+1x (" + clickKerroinHinta + "c)";
 
             if(autoOstoKerta >= 5)
             {
@@ -70,7 +81,7 @@ namespace Omaprojekti
             }
             else
             {
-                AutoClickerOstoBT.Text = "sek (" + autoClickerHinta + "c)";
+                AutoClickerOstoBT.Text = autoClickerNopeus + "s (" + autoClickerHinta + "c)";
             }
             if (kissaOstoKerta >= 1)
             {
@@ -78,7 +89,7 @@ namespace Omaprojekti
             }
             else
             {
-                KissaOstoBT.Text = "Kissa (" + kissaHinta + "c)";
+                KissaOstoBT.Text = "Kissat (" + kissaHinta + "c)";
             }
         }
 
@@ -91,31 +102,35 @@ namespace Omaprojekti
         // *CLICK* //
         private void ClickBT_Click(object sender, EventArgs e)
         {
+            clicks += 1 * clickKerroin;
+            clicks += 1 * clickKerroin2;
             totalClicks += 1 * clickKerroin;
             totalClicks += 1 * clickKerroin2;
+
+            ClicksLB.Text = "Clicks (c): " + clicks + "c";
             TotalClicksLB.Text = "Total Clicks: " + totalClicks;
 
             if (KissaClicksLB.Visible == true)
             {
                 kissat += 1;
-                KissaClicksLB.Text = "Kissat: " + kissat;
+                KissaClicksLB.Text = "Kissat (k): " + kissat + "k";
             }
         }
 
         // KERROIN //
         private void KerroinOstoBT_Click(object sender, EventArgs e)
         {
-           KerroinOstoBT.Text = "MUL2x (" + clickKerroinHinta + "c)"; 
+           KerroinOstoBT.Text = "+1x (" + clickKerroinHinta + "c)"; 
 
-            if (clickKerroinMaara == 0 && totalClicks >= clickKerroinHinta)
+            if (clickKerroinMaara == 0 && clicks >= clickKerroinHinta)
             {
 
-                totalClicks -= clickKerroinHinta;
-                TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+                clicks -= clickKerroinHinta;
+                ClicksLB.Text = "Clicks (c): " + clicks + "c";
 
                 clickKerroin += 1;
                 clickKerroinHinta *= 2;
-                KerroinOstoBT.Text = "MUL2x (" + clickKerroinHinta + "c)";
+                KerroinOstoBT.Text = "+1x (" + clickKerroinHinta + "c)";
             }
         }
 
@@ -123,69 +138,81 @@ namespace Omaprojekti
         private void AutoClickerOstoBT_Click(object sender, EventArgs e)
         {
             
-            if (autoOstoKerta == 0 && totalClicks >= autoClickerHinta)
+            if (autoOstoKerta == 0 && clicks >= autoClickerHinta)
             {
-                totalClicks -= autoClickerHinta;
-                TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+                clicks -= autoClickerHinta;
+                ClicksLB.Text = "Clicks (c): " + clicks + "c";
 
                 autoClickerNopeus = 5;
+                autoAikaNyt = autoClickerNopeus * 1000;
                 autoClickerHinta *= 2;
                 AutoClickerT.Interval = autoClickerNopeus * 1000;
                 AutoClickerT.Enabled = true;
-                AutoClickerOstoBT.Text = "sek (" + autoClickerHinta + "c)";
+                AutoClickerLaskinT.Enabled = true;
+                AutoClickerOstoBT.Text = autoClickerNopeus + "s (" + autoClickerHinta + "c)";
                 autoOstoKerta += 1;
+                AutoClickerLaskinLB.Text = "Automaatti: " + autoClickerNopeus;
+                AutoClickerLaskinLB.Visible = true;
             }
 
-            if (autoOstoKerta == 1 && totalClicks >= autoClickerHinta)
+            if (autoOstoKerta == 1 && clicks >= autoClickerHinta)
             {
-                totalClicks -= autoClickerHinta;
-                TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+                clicks -= autoClickerHinta;
+                ClicksLB.Text = "Clicks (c): " + clicks + "c";
 
                 autoClickerNopeus = 4;
+                autoAikaNyt = autoClickerNopeus * 1000;
                 autoClickerHinta *= 2;
                 AutoClickerT.Interval = autoClickerNopeus * 1000;
-                AutoClickerT.Enabled = true;
-                AutoClickerOstoBT.Text = "sek (" + autoClickerHinta + "c)";
+                //AutoClickerT.Enabled = true;
+                AutoClickerOstoBT.Text = autoClickerNopeus + "s (" + autoClickerHinta + "c)";
                 autoOstoKerta += 1;
+                AutoClickerLaskinLB.Text = "Automaatti: " + autoClickerNopeus;
             }
 
-            if (autoOstoKerta == 2 && totalClicks >= autoClickerHinta)
+            if (autoOstoKerta == 2 && clicks >= autoClickerHinta)
             {
-                totalClicks -= autoClickerHinta;
-                TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+                clicks -= autoClickerHinta;
+                ClicksLB.Text = "Clicks (c): " + clicks + "c";
 
                 autoClickerNopeus = 3;
+                autoAikaNyt = autoClickerNopeus * 1000;
                 autoClickerHinta *= 2;
                 AutoClickerT.Interval = autoClickerNopeus * 1000;
-                AutoClickerT.Enabled = true;
-                AutoClickerOstoBT.Text = "sek (" + autoClickerHinta + "c)";
+                //AutoClickerT.Enabled = true;
+                AutoClickerOstoBT.Text = autoClickerNopeus + "s (" + autoClickerHinta + "c)";
                 autoOstoKerta += 1;
+                AutoClickerLaskinLB.Text = "Automaatti: " + autoClickerNopeus;
             }
 
-            if (autoOstoKerta == 3 && totalClicks >= autoClickerHinta)
+            if (autoOstoKerta == 3 && clicks >= autoClickerHinta)
             {
-                totalClicks -= autoClickerHinta;
-                TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+                clicks -= autoClickerHinta;
+                ClicksLB.Text = "Clicks (c): " + clicks + "c";
 
                 autoClickerNopeus = 2;
+                autoAikaNyt = autoClickerNopeus * 1000;
                 autoClickerHinta *= 2;
                 AutoClickerT.Interval = autoClickerNopeus * 1000;
-                AutoClickerT.Enabled = true;
-                AutoClickerOstoBT.Text = "sek (" + autoClickerHinta + "c)";
+                //AutoClickerT.Enabled = true;
+                AutoClickerOstoBT.Text = autoClickerNopeus + "s (" + autoClickerHinta + "c)";
                 autoOstoKerta += 1;
+                AutoClickerLaskinLB.Text = "Automaatti: " + autoClickerNopeus;
             }
 
-            if (autoOstoKerta == 4 && totalClicks >= autoClickerHinta)
+            if (autoOstoKerta == 4 && clicks >= autoClickerHinta)
             {
-                totalClicks -= autoClickerHinta;
-                TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+                clicks -= autoClickerHinta;
+                ClicksLB.Text = "Clicks (c): " + clicks + "c";
 
                 autoClickerNopeus = 1;
+                autoAikaNyt = autoClickerNopeus * 1000;
                 autoClickerHinta *= 2;
                 AutoClickerT.Interval = autoClickerNopeus * 1000;
-                AutoClickerT.Enabled = true;
-                AutoClickerOstoBT.Text = "Ostettu";
+                //AutoClickerT.Enabled = true;
+                AutoClickerOstoBT.Text = autoClickerNopeus + "s (Ostettu)";
                 autoOstoKerta += 1;
+                AutoClickerLaskinLB.Text = "Automaatti: " + autoClickerNopeus;
             }
 
         }
@@ -193,9 +220,28 @@ namespace Omaprojekti
         // AUTO CLICKER AJASTIN //
         private void AutoClickerT_Tick(object sender, EventArgs e)
         {
+            /*
+            clicks += 1 * clickKerroin;
+            clicks += 1 * clickKerroin2;
             totalClicks += 1 * clickKerroin;
             totalClicks += 1 * clickKerroin2;
+            ClicksLB.Text = "Clicks (c): " + clicks+ "c";
             TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+            */
+
+            ClickBT_Click(sender, e);
+        }
+
+        // AUTO CLICKER TULKKI //
+        private void AutoClickerLaskinT_Tick(object sender, EventArgs e)
+        {
+            autoAikaNyt -= 500;
+
+            if (autoAikaNyt == 0)
+            {
+                autoAikaNyt = autoClickerNopeus * 1000;
+            }
+            AutoClickerLaskinLB.Text = "Automaatti: " + (autoAikaNyt / 1000).ToString();
         }
 
         // LATAA KÄYTTÄJÄN PELIN TALLENNUKSEN //
@@ -210,15 +256,15 @@ namespace Omaprojekti
             
         }
 
-        // KISSA KERROIN //
+        // KISSOJEN OSTO //
         private void KissaOstoBT_Click(object sender, EventArgs e)
         {
           
-            if (totalClicks >= kissaHinta && kissaOstoKerta == 0)
+            if (clicks >= kissaHinta && kissaOstoKerta == 0)
             {
-                totalClicks -= kissaHinta;
-                TotalClicksLB.Text = "Total Clicks: " + totalClicks;
-                KissaClicksLB.Text = "Kissat: " + kissat;
+                clicks -= kissaHinta;
+                ClicksLB.Text = "Clicks (c): " + clicks + "c";
+                KissaClicksLB.Text = "Kissat (k): " + kissat + "k";
                 KissaOstoBT.Text = "Ostettu";
                 KissaClicksLB.Visible = true;
                 kissaOstoKerta += 1;
@@ -228,18 +274,43 @@ namespace Omaprojekti
         // TOINEN KERROIN //
         private void KerroinOsto2BT_Click(object sender, EventArgs e)
         {
-          KerroinOsto2BT.Text = "MUL4x (" + clickKerroin2Hinta + "k)";
+          KerroinOsto2BT.Text = "+1x (" + clickKerroin2Hinta + "k)";
 
             if (clickKerroin2Maara == 0 && kissat >= clickKerroin2Hinta)
             {
                 kissat -= clickKerroin2Hinta;
-                KissaClicksLB.Text = "Kissat: " + kissat;
-                TotalClicksLB.Text = "Total Clicks: " + totalClicks;
+                KissaClicksLB.Text = "Kissat (k): " + kissat + "k";
 
                 clickKerroin2 += 2;
                 clickKerroin2Hinta *= 3;
-                KerroinOsto2BT.Text = "MUL4x (" + clickKerroin2Hinta + "k)";
+                KerroinOsto2BT.Text = "+2x (" + clickKerroin2Hinta + "k)";
             }
         }
+
+        private void TallennusPB_Click(object sender, EventArgs e)
+        {
+            if(TallennaPanel.Visible == false)
+            {
+                TallennaPanel.Visible = true;
+            }
+            else
+            {
+                TallennaPanel.Visible = false;
+            }
+        }
+
+        private void TallennusPB_MouseEnter(object sender, EventArgs e)
+        {
+            TallennusPB.Location = new Point(720, 370);
+            TallennusPB.Size = new System.Drawing.Size(72, 72);
+        }
+
+        private void TallennusPB_MouseLeave(object sender, EventArgs e)
+        {
+            TallennusPB.Location = new Point(724, 374);
+            TallennusPB.Size = new System.Drawing.Size(64, 64);
+        }
+
+
     }
 }

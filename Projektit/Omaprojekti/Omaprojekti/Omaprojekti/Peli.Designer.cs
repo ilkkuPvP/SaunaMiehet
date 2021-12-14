@@ -33,20 +33,16 @@ namespace Omaprojekti
             this.label7 = new System.Windows.Forms.Label();
             this.TakaisinPeliBT = new System.Windows.Forms.Button();
             this.ClickBT = new System.Windows.Forms.Button();
-            this.TotalClicksLB = new System.Windows.Forms.Label();
+            this.ClicksLB = new System.Windows.Forms.Label();
             this.KauppaBT = new System.Windows.Forms.Button();
             this.KauppaPanel = new System.Windows.Forms.Panel();
             this.KerroinOsto2BT = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.AutoClickerOstoBT = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.KissaOstoBT = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.KerroinOstoBT = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TakaisinKauppaBT = new System.Windows.Forms.Button();
@@ -54,7 +50,15 @@ namespace Omaprojekti
             this.TallennaTiedotBT = new System.Windows.Forms.Button();
             this.LataaTiedotBT = new System.Windows.Forms.Button();
             this.KissaClicksLB = new System.Windows.Forms.Label();
+            this.TotalClicksLB = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TallennaPanel = new System.Windows.Forms.Panel();
+            this.TallennusPB = new System.Windows.Forms.PictureBox();
+            this.AutoClickerLaskinT = new System.Windows.Forms.Timer(this.components);
+            this.AutoClickerLaskinLB = new System.Windows.Forms.Label();
             this.KauppaPanel.SuspendLayout();
+            this.TallennaPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TallennusPB)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -89,14 +93,14 @@ namespace Omaprojekti
             this.ClickBT.UseVisualStyleBackColor = true;
             this.ClickBT.Click += new System.EventHandler(this.ClickBT_Click);
             // 
-            // TotalClicksLB
+            // ClicksLB
             // 
-            this.TotalClicksLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalClicksLB.Location = new System.Drawing.Point(12, 9);
-            this.TotalClicksLB.Name = "TotalClicksLB";
-            this.TotalClicksLB.Size = new System.Drawing.Size(776, 23);
-            this.TotalClicksLB.TabIndex = 32;
-            this.TotalClicksLB.Text = "Total Clicks:";
+            this.ClicksLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClicksLB.Location = new System.Drawing.Point(12, 32);
+            this.ClicksLB.Name = "ClicksLB";
+            this.ClicksLB.Size = new System.Drawing.Size(262, 23);
+            this.ClicksLB.TabIndex = 32;
+            this.ClicksLB.Text = "Clicks:";
             // 
             // KauppaBT
             // 
@@ -113,15 +117,11 @@ namespace Omaprojekti
             // 
             this.KauppaPanel.Controls.Add(this.KerroinOsto2BT);
             this.KauppaPanel.Controls.Add(this.label6);
-            this.KauppaPanel.Controls.Add(this.button5);
-            this.KauppaPanel.Controls.Add(this.label5);
             this.KauppaPanel.Controls.Add(this.AutoClickerOstoBT);
             this.KauppaPanel.Controls.Add(this.label4);
             this.KauppaPanel.Controls.Add(this.KissaOstoBT);
             this.KauppaPanel.Controls.Add(this.label3);
             this.KauppaPanel.Controls.Add(this.KerroinOstoBT);
-            this.KauppaPanel.Controls.Add(this.button1);
-            this.KauppaPanel.Controls.Add(this.label2);
             this.KauppaPanel.Controls.Add(this.label8);
             this.KauppaPanel.Controls.Add(this.label1);
             this.KauppaPanel.Controls.Add(this.TakaisinKauppaBT);
@@ -135,7 +135,7 @@ namespace Omaprojekti
             // KerroinOsto2BT
             // 
             this.KerroinOsto2BT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KerroinOsto2BT.Location = new System.Drawing.Point(481, 226);
+            this.KerroinOsto2BT.Location = new System.Drawing.Point(481, 165);
             this.KerroinOsto2BT.Name = "KerroinOsto2BT";
             this.KerroinOsto2BT.Size = new System.Drawing.Size(123, 41);
             this.KerroinOsto2BT.TabIndex = 43;
@@ -147,31 +147,12 @@ namespace Omaprojekti
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(418, 236);
+            this.label6.Location = new System.Drawing.Point(358, 175);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 23);
+            this.label6.Size = new System.Drawing.Size(126, 23);
             this.label6.TabIndex = 44;
             this.label6.Text = "Kerroin:";
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(481, 173);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 41);
-            this.button5.TabIndex = 41;
-            this.button5.Text = "Takaisin";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(418, 183);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 23);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Kerroin:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // AutoClickerOstoBT
             // 
@@ -188,16 +169,17 @@ namespace Omaprojekti
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(418, 128);
+            this.label4.Location = new System.Drawing.Point(362, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 23);
+            this.label4.Size = new System.Drawing.Size(122, 23);
             this.label4.TabIndex = 40;
-            this.label4.Text = "Kerroin:";
+            this.label4.Text = "Automaatti:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // KissaOstoBT
             // 
             this.KissaOstoBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KissaOstoBT.Location = new System.Drawing.Point(218, 226);
+            this.KissaOstoBT.Location = new System.Drawing.Point(218, 165);
             this.KissaOstoBT.Name = "KissaOstoBT";
             this.KissaOstoBT.Size = new System.Drawing.Size(123, 41);
             this.KissaOstoBT.TabIndex = 37;
@@ -209,11 +191,12 @@ namespace Omaprojekti
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(155, 236);
+            this.label3.Location = new System.Drawing.Point(109, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 23);
+            this.label3.Size = new System.Drawing.Size(112, 23);
             this.label3.TabIndex = 38;
-            this.label3.Text = "Kerroin:";
+            this.label3.Text = "Avaa kissat:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // KerroinOstoBT
             // 
@@ -226,26 +209,6 @@ namespace Omaprojekti
             this.KerroinOstoBT.UseVisualStyleBackColor = true;
             this.KerroinOstoBT.Click += new System.EventHandler(this.KerroinOstoBT_Click);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(218, 173);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 41);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Takaisin";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(155, 183);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 23);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Kerroin:";
-            // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
@@ -255,6 +218,7 @@ namespace Omaprojekti
             this.label8.Size = new System.Drawing.Size(66, 23);
             this.label8.TabIndex = 34;
             this.label8.Text = "Kerroin:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label1
             // 
@@ -285,9 +249,9 @@ namespace Omaprojekti
             // TallennaTiedotBT
             // 
             this.TallennaTiedotBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TallennaTiedotBT.Location = new System.Drawing.Point(485, 378);
+            this.TallennaTiedotBT.Location = new System.Drawing.Point(26, 35);
             this.TallennaTiedotBT.Name = "TallennaTiedotBT";
-            this.TallennaTiedotBT.Size = new System.Drawing.Size(117, 60);
+            this.TallennaTiedotBT.Size = new System.Drawing.Size(135, 60);
             this.TallennaTiedotBT.TabIndex = 48;
             this.TallennaTiedotBT.Text = "Tallenna tiedot";
             this.TallennaTiedotBT.UseVisualStyleBackColor = true;
@@ -296,43 +260,109 @@ namespace Omaprojekti
             // LataaTiedotBT
             // 
             this.LataaTiedotBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.LataaTiedotBT.Location = new System.Drawing.Point(608, 378);
+            this.LataaTiedotBT.Location = new System.Drawing.Point(167, 35);
             this.LataaTiedotBT.Name = "LataaTiedotBT";
-            this.LataaTiedotBT.Size = new System.Drawing.Size(180, 60);
+            this.LataaTiedotBT.Size = new System.Drawing.Size(135, 60);
             this.LataaTiedotBT.TabIndex = 47;
-            this.LataaTiedotBT.Text = "Lataa edellisen tallennuksen tiedot";
+            this.LataaTiedotBT.Text = "Lataa tiedot";
             this.LataaTiedotBT.UseVisualStyleBackColor = true;
             this.LataaTiedotBT.Click += new System.EventHandler(this.LataaTiedotBT_Click);
             // 
             // KissaClicksLB
             // 
             this.KissaClicksLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KissaClicksLB.Location = new System.Drawing.Point(12, 32);
+            this.KissaClicksLB.Location = new System.Drawing.Point(12, 55);
             this.KissaClicksLB.Name = "KissaClicksLB";
             this.KissaClicksLB.Size = new System.Drawing.Size(262, 23);
             this.KissaClicksLB.TabIndex = 49;
             this.KissaClicksLB.Text = "Kissat:";
             this.KissaClicksLB.Visible = false;
             // 
+            // TotalClicksLB
+            // 
+            this.TotalClicksLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalClicksLB.Location = new System.Drawing.Point(12, 9);
+            this.TotalClicksLB.Name = "TotalClicksLB";
+            this.TotalClicksLB.Size = new System.Drawing.Size(776, 23);
+            this.TotalClicksLB.TabIndex = 50;
+            this.TotalClicksLB.Text = "Total Clicks:";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(16, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(303, 23);
+            this.label9.TabIndex = 51;
+            this.label9.Text = "HUOM! Tallentaa vain \"Total Clicks\" osion";
+            // 
+            // TallennaPanel
+            // 
+            this.TallennaPanel.BackColor = System.Drawing.Color.Transparent;
+            this.TallennaPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TallennaPanel.Controls.Add(this.LataaTiedotBT);
+            this.TallennaPanel.Controls.Add(this.TallennaTiedotBT);
+            this.TallennaPanel.Controls.Add(this.label9);
+            this.TallennaPanel.Location = new System.Drawing.Point(464, 265);
+            this.TallennaPanel.Name = "TallennaPanel";
+            this.TallennaPanel.Size = new System.Drawing.Size(324, 103);
+            this.TallennaPanel.TabIndex = 53;
+            this.TallennaPanel.Visible = false;
+            // 
+            // TallennusPB
+            // 
+            this.TallennusPB.BackColor = System.Drawing.Color.Transparent;
+            this.TallennusPB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TallennusPB.Image = global::Omaprojekti.Properties.Resources.Floppy_Disk_PXArt__bigger_;
+            this.TallennusPB.Location = new System.Drawing.Point(724, 374);
+            this.TallennusPB.Name = "TallennusPB";
+            this.TallennusPB.Size = new System.Drawing.Size(64, 64);
+            this.TallennusPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TallennusPB.TabIndex = 52;
+            this.TallennusPB.TabStop = false;
+            this.TallennusPB.Click += new System.EventHandler(this.TallennusPB_Click);
+            this.TallennusPB.MouseEnter += new System.EventHandler(this.TallennusPB_MouseEnter);
+            this.TallennusPB.MouseLeave += new System.EventHandler(this.TallennusPB_MouseLeave);
+            // 
+            // AutoClickerLaskinT
+            // 
+            this.AutoClickerLaskinT.Interval = 500;
+            this.AutoClickerLaskinT.Tick += new System.EventHandler(this.AutoClickerLaskinT_Tick);
+            // 
+            // AutoClickerLaskinLB
+            // 
+            this.AutoClickerLaskinLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AutoClickerLaskinLB.Location = new System.Drawing.Point(348, 91);
+            this.AutoClickerLaskinLB.Name = "AutoClickerLaskinLB";
+            this.AutoClickerLaskinLB.Size = new System.Drawing.Size(103, 60);
+            this.AutoClickerLaskinLB.TabIndex = 54;
+            this.AutoClickerLaskinLB.Text = "Automaatti: 0";
+            this.AutoClickerLaskinLB.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.AutoClickerLaskinLB.Visible = false;
+            // 
             // Peli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.KissaClicksLB);
+            this.Controls.Add(this.TallennusPB);
             this.Controls.Add(this.TotalClicksLB);
+            this.Controls.Add(this.KissaClicksLB);
+            this.Controls.Add(this.ClicksLB);
             this.Controls.Add(this.KauppaPanel);
             this.Controls.Add(this.KauppaBT);
             this.Controls.Add(this.ClickBT);
             this.Controls.Add(this.TakaisinPeliBT);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.TallennaTiedotBT);
-            this.Controls.Add(this.LataaTiedotBT);
+            this.Controls.Add(this.TallennaPanel);
+            this.Controls.Add(this.AutoClickerLaskinLB);
             this.Name = "Peli";
             this.Text = "Peli";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Peli_FormClosed);
             this.Load += new System.EventHandler(this.Peli_Load);
             this.KauppaPanel.ResumeLayout(false);
+            this.TallennaPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TallennusPB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -342,26 +372,28 @@ namespace Omaprojekti
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button TakaisinPeliBT;
         private System.Windows.Forms.Button ClickBT;
-        private System.Windows.Forms.Label TotalClicksLB;
+        private System.Windows.Forms.Label ClicksLB;
         private System.Windows.Forms.Button KauppaBT;
         private System.Windows.Forms.Panel KauppaPanel;
         private System.Windows.Forms.Button TakaisinKauppaBT;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button KerroinOstoBT;
         private System.Windows.Forms.Button KerroinOsto2BT;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button AutoClickerOstoBT;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button KissaOstoBT;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer AutoClickerT;
         private System.Windows.Forms.Button TallennaTiedotBT;
         private System.Windows.Forms.Button LataaTiedotBT;
         private System.Windows.Forms.Label KissaClicksLB;
+        private System.Windows.Forms.Label TotalClicksLB;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox TallennusPB;
+        private System.Windows.Forms.Panel TallennaPanel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer AutoClickerLaskinT;
+        private System.Windows.Forms.Label AutoClickerLaskinLB;
     }
 }

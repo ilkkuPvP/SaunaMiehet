@@ -127,8 +127,7 @@ namespace Omaprojekti
 
         private void KirjauduForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Peli f1 = new Peli();
-            f1.Close();
+            Application.Exit();
         }
     }
 }

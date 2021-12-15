@@ -1,0 +1,10 @@
+1. Tee database nimeltä "omaprojekti" oletusasetuksilla.
+
+2. Tee taulukko nimeltä "kirjautuminen". Laita "kirjautuminen" taulukkoon 3 saraketta. 
+Sarakkeisiin tulee nimiksi(kirjainkoot pitää olla oikeat) "ID", "Käyttäjä", "Salasana". 
+Kaikki on varchar paitsi ID, joka on int. ID kohtaan tulee pistää auto_increment päälle. Varcharituudeksi voit
+laittaa jokaiseen minkä tahansa (meillä 25).
+
+3. Tee taulukko "pelintallennus". Taulukkoon huoneet tulee 2 saraketta. 
+Sarakkeisiin tulee nimiksi "ID", "Totalclicks". "Totalclicks" sarakkeen tyyppi on varchar ja "ID" on int auto_increment:llä. 
+VarChar pituudeksi mikävain (meillä 25).
